@@ -120,7 +120,7 @@ export default function TestimonialSlider() {
         </div>
 
         <a
-          href="https://maps.app.goo.gl/4Jq9rNgjSmcEqxQR6"
+          href="https://maps.app.goo.gl/3MeZCrY49Nifmsp87"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-1.5 text-xs font-bold text-teal-deep bg-teal-light/60 hover:bg-teal-light px-4 py-2 rounded-full border border-teal-soft/30 transition-all"
