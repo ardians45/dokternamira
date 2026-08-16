@@ -8,7 +8,7 @@ import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 
 <BaseLayout
   title="Jadwal Praktik & Lokasi Dokter Namira Malang"
-  description="Alamat lengkap Ruko Ragali Residence Tirto Joyo Merjosari Malang, jam operasional praktik 06.00-20.00 WIB, dan peta lokasi petunjuk arah."
+  description="Alamat lengkap Ruko Ragali Residence Tirto Joyo Merjosari Malang, jam praktik pagi & sore, serta perawatan kecantikan, dan peta lokasi petunjuk arah."
 >
   <Header />
 
@@ -50,8 +50,11 @@ import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
                 <div class="flex items-start space-x-3">
                   <Clock size={18} class="text-teal-soft shrink-0 mt-0.5" />
                   <div>
-                    <strong class="block text-slate-800 font-bold mb-0.5">Jam Operasional:</strong>
-                    <span>Buka Setiap Hari (Senin - Minggu)<br /><strong class="text-teal-deep">06.00 - 20.00 WIB</strong></span>
+                    <strong class="block text-slate-800 font-bold mb-0.5">Jam Praktik:</strong>
+                    <span class="space-y-1 block mt-1">
+                      <span class="block"><strong>Praktek Umum:</strong> <span class="text-teal-deep">06.00-09.00</span> & <span class="text-teal-deep">16.00-20.00</span></span>
+                      <span class="block"><strong>Kecantikan:</strong> <span class="text-teal-deep">09.00-16.00</span></span>
+                    </span>
                   </div>
                 </div>
 
