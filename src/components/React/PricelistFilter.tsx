@@ -54,83 +54,123 @@ export default function PricelistFilter() {
     ? priceData
     : priceData.filter(item => item.category === activeCategory);
 
+  const getCategoryIcon = (cat: string) => {
+    switch (cat) {
+      case 'facial': return <Sparkles size={16} />;
+      case 'peeling': return <Tag size={16} />;
+      case 'bekam': return <HeartPulse size={16} />;
+      case 'body': return <Droplet size={16} />;
+      default: return null;
+    }
+  };
+
+  const getCategoryColor = (cat: string) => {
+    switch (cat) {
+      case 'facial': return 'text-pink-500 bg-pink-50 border-pink-200';
+      case 'peeling': return 'text-amber-500 bg-amber-50 border-amber-200';
+      case 'bekam': return 'text-red-500 bg-red-50 border-red-200';
+      case 'body': return 'text-blue-500 bg-blue-50 border-blue-200';
+      default: return 'text-slate-500 bg-slate-50 border-slate-200';
+    }
+  };
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Category Filter Tabs */}
-      <div className="flex flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
         <button
           onClick={() => setActiveCategory('all')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+          className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-sm border ${
             activeCategory === 'all'
-              ? 'bg-teal-deep text-white shadow-md'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              ? 'bg-slate-900 text-white border-slate-900 shadow-md transform -translate-y-0.5'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
           }`}
         >
-          Semua Treatment ({priceData.length})
+          Semua Layanan
         </button>
         <button
           onClick={() => setActiveCategory('facial')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
+          className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-sm border flex items-center space-x-2 ${
             activeCategory === 'facial'
-              ? 'bg-teal-deep text-white shadow-md'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              ? 'bg-pink-500 text-white border-pink-500 shadow-md transform -translate-y-0.5'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-pink-200 hover:bg-pink-50'
           }`}
         >
-          <Sparkles size={14} />
-          <span>Facial (20)</span>
+          <Sparkles size={16} className={activeCategory === 'facial' ? 'text-white' : 'text-pink-500'} />
+          <span>Facial</span>
         </button>
         <button
           onClick={() => setActiveCategory('peeling')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
+          className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-sm border flex items-center space-x-2 ${
             activeCategory === 'peeling'
-              ? 'bg-teal-deep text-white shadow-md'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              ? 'bg-amber-500 text-white border-amber-500 shadow-md transform -translate-y-0.5'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-amber-200 hover:bg-amber-50'
           }`}
         >
-          <Tag size={14} />
-          <span>Peeling (3)</span>
+          <Tag size={16} className={activeCategory === 'peeling' ? 'text-white' : 'text-amber-500'} />
+          <span>Peeling</span>
         </button>
         <button
           onClick={() => setActiveCategory('bekam')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
+          className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-sm border flex items-center space-x-2 ${
             activeCategory === 'bekam'
-              ? 'bg-teal-deep text-white shadow-md'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              ? 'bg-red-500 text-white border-red-500 shadow-md transform -translate-y-0.5'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-red-200 hover:bg-red-50'
           }`}
         >
-          <HeartPulse size={14} />
-          <span>Bekam & Fashdu (4)</span>
+          <HeartPulse size={16} className={activeCategory === 'bekam' ? 'text-white' : 'text-red-500'} />
+          <span>Bekam</span>
         </button>
         <button
           onClick={() => setActiveCategory('body')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center space-x-1 ${
+          className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-sm border flex items-center space-x-2 ${
             activeCategory === 'body'
-              ? 'bg-teal-deep text-white shadow-md'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              ? 'bg-blue-500 text-white border-blue-500 shadow-md transform -translate-y-0.5'
+              : 'bg-white text-slate-600 border-slate-200 hover:border-blue-200 hover:bg-blue-50'
           }`}
         >
-          <Droplet size={14} />
-          <span>Body & Infus (3)</span>
+          <Droplet size={16} className={activeCategory === 'body' ? 'text-white' : 'text-blue-500'} />
+          <span>Body & Infus</span>
         </button>
       </div>
 
       {/* Grid Item List */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         {filteredPrices.map((item, idx) => (
           <div
-            key={idx}
-            className="p-3.5 bg-white rounded-xl border border-slate-200 hover:border-teal-soft hover:shadow-md transition-all flex justify-between items-center text-xs"
+            key={`${item.name}-${idx}`}
+            className="group relative p-5 bg-white rounded-2xl border border-slate-200 hover:border-teal-300 hover:shadow-premium transition-all duration-300 flex justify-between items-center overflow-hidden"
           >
-            <div className="flex items-center space-x-2 font-medium text-slate-800">
-              <CheckCircle2 size={14} className="text-teal-soft shrink-0" />
-              <span>{item.name}</span>
+            {/* Subtle category color indicator line on the left */}
+            <div className={`absolute left-0 top-0 bottom-0 w-1 ${
+              item.category === 'facial' ? 'bg-pink-400' :
+              item.category === 'peeling' ? 'bg-amber-400' :
+              item.category === 'bekam' ? 'bg-red-400' : 'bg-blue-400'
+            }`}></div>
+
+            <div className="flex items-center space-x-4 pl-2">
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${getCategoryColor(item.category)}`}>
+                {getCategoryIcon(item.category)}
+              </div>
+              <div className="flex flex-col">
+                <span className="font-bold text-slate-900 group-hover:text-teal-deep transition-colors text-sm md:text-base">{item.name}</span>
+                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">{item.category}</span>
+              </div>
             </div>
-            <span className="font-extrabold text-teal-deep bg-teal-light px-2.5 py-1 rounded-md shrink-0 ml-2">
-              {item.price}
-            </span>
+            <div className="text-right shrink-0 ml-4">
+              <span className="inline-block font-extrabold text-teal-deep bg-teal-50 border border-teal-100 px-3 py-1.5 rounded-lg text-sm group-hover:bg-teal-deep group-hover:text-white transition-colors">
+                {item.price}
+              </span>
+            </div>
           </div>
         ))}
       </div>
+      
+      {filteredPrices.length === 0 && (
+        <div className="text-center py-12 text-slate-500">
+          <p>Belum ada data untuk kategori ini.</p>
+        </div>
+      )}
     </div>
   );
 }
