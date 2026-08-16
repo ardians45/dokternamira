@@ -83,16 +83,21 @@ import {
           </div>
 
           <!-- Right Column: Editorial Photography -->
-          <div class="lg:col-span-6">
-            <div class="relative">
-              <!-- Simple structural offset box -->
-              <div class="absolute inset-0 translate-x-4 translate-y-4 bg-teal-light/50 hidden md:block"></div>
+          <div class="lg:col-span-6 flex justify-center items-center mt-12 lg:mt-0">
+            <div class="relative w-full max-w-lg mx-auto">
+              <!-- Organic Blob Image -->
               <img
                 src="/dokter-namira-portrait.jpg"
                 alt="Dr. Namira Farhayati Lubis"
-                class="relative z-10 w-full h-[500px] md:h-[600px] object-cover object-top"
+                class="relative z-10 w-full h-[450px] sm:h-[500px] md:h-[550px] object-cover object-top shadow-sm"
+                style="border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;"
                 loading="eager"
               />
+
+              <!-- Floating Badge -->
+              <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 bg-blue-500 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full shadow-lg transform -rotate-6 text-lg sm:text-xl tracking-wide">
+                Dokter
+              </div>
             </div>
           </div>
 
