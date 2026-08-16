@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+  schemaData?: object;
+}
+
+const {
+  title,
+  description,
+  image = '/og-image.jpg',
+  canonicalURL = Astro.url.href,
+  schemaData,
+} = Astro.props;
+
+// Default Organization & LocalBusiness JSON-LD Schema
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "Physician"],
+  "@id": "https://dokternamira.com/#organization",
+  "name": "Praktek Dokter Namira - Homecare & Dokter Umum Malang",
+  "image": "https://dokternamira.com/assets/images/dokter-namira-logo.png",
+  "url": "https://dokternamira.com",
+  "telephone": "+6285819800843",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ruko Perumahan Ragali Residence, Jl. Tirto Joyo No. 119-69, Merjosari",
+    "addressLocality": "Malang",
+    "addressRegion": "Jawa Timur",
+    "postalCode": "65144",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -7.9400,
+    "longitude": 112.6050
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "06:00",
+      "closes": "20:00"
+    }
+  ],
+  "medicalSpecialty": ["GeneralCare", "PrimaryCare"],
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "Dokter Homecare & Homevisit Malang" },
+    { "@type": "MedicalProcedure", "name": "Pengobatan Infeksi Menular Seksual (IMS)" },
+    { "@type": "MedicalProcedure", "name": "Infus Booster Vitamin & Whitening" },
+    { "@type": "MedicalProcedure", "name": "Bekam Sunnah & Terapi Fashdu" }
+  ]
+};
+
+const activeSchema = schemaData || defaultSchema;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  
+  <!-- Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / WhatsApp / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, Astro.url)} />
+
+  <!-- Geo Tags for Local SEO Malang -->
+  <meta name="geo.region" content="ID-JI" />
+  <meta name="geo.placename" content="Malang" />
+  <meta name="geo.position" content="-7.9400;112.6050" />
+  <meta name="ICBM" content="-7.9400, 112.6050" />
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(activeSchema)} />
+</head>
+<body class="bg-white text-slate-main antialiased selection:bg-teal-soft selection:text-white flex flex-col min-h-screen">
+  <slot />
+</body>
+</html>

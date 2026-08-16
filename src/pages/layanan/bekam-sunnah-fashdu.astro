@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { HeartPulse, CheckCircle2, PhoneCall, ShieldCheck } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Bekam Sunnah Medis & Fashdu Malang - Praktek Dr. Namira"
+  description="Layanan terapi bekam sunnah dan fashdu steril di Malang oleh dokter umum. Jarum sekali pakai, bersih, dan higienis sesuai standar medis."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <HeartPulse size={14} class="text-emerald-400" />
+            <span>Terapi Bekam Sunnah • Peralatan Higienis Medis</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Terapi Bekam Sunnah & Fashdu Steril di Malang
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Perpaduan keutamaan thibbun nabawi dengan standar sterilitas kesehatan medis modern. Ditangani secara terampil untuk membantu kebugaran dan melancarkan sirkulasi.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20jadwal%20Terapi%20Bekam%20Sunnah..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Jadwalkan Bekam via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-8 space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Keutamaan & Standar Bekam Medis</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Terapi bekam merupakan metode pengobatan tradisional yang direkomendasikan secara sunnah. Di Praktek Dokter Namira, kami memastikan tindakan bekam dilakukan dengan pendekatan medis murni—menjamin peralatan bebas dari kontaminasi silang.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-slate-800">Standar Sterilitas Bekam Kami:</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Jarum & Cup Disposable</strong>
+                    <span>Peralatan kop bekam dan jarum peluncur selalu baru & dibuang setelah 1 kali penggunaan.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Antiseptik Medis Standar</strong>
+                    <span>Pembersihan area kulit sebelum dan sesudah bekam dengan larutan antiseptik standar RS.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flyer Sunnah Bekam Section -->
+            <div class="p-6 bg-teal-deep text-white rounded-3xl shadow-xl space-y-4 relative overflow-hidden">
+              <div class="inline-flex items-center space-x-2 bg-teal-soft/30 border border-teal-soft/40 px-3 py-1 rounded-full text-xs font-semibold text-teal-light">
+                <span>Anjuran Sunnah Hijriyah</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-teal-light">Ayo Bekam Sunnah!</h3>
+              <p class="text-xs text-slate-200 leading-relaxed italic border-l-2 border-teal-soft pl-3">
+                "Barangsiapa berbekam pada tanggal <strong>tujuh belas</strong>, <strong>sembilan belas</strong>, dan <strong>dua puluh satu</strong>, maka bekam tersebut menjadi obat dari segala penyakit."
+                <span class="block mt-1 font-semibold not-italic text-teal-light text-[11px]">(HR. Abu Dawud)</span>
+              </p>
+              <div class="pt-2 flex items-center justify-between border-t border-teal-hover text-xs">
+                <div>
+                  <span class="block text-[11px] text-teal-light">Jadwal Sunnah:</span>
+                  <strong class="text-white">17, 19, 21 Safar 1448 H</strong>
+                </div>
+                <a
+                  href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20jadwal%20Bekam%20Sunnah..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-xl text-xs transition-colors"
+                >
+                  WA: 0852-7000-1948
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
+              <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
+                Jadwalkan Bekam
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Pastikan kenyamanan jam terapi bekam Anda dengan melakukan konfirmasi jadwal terlebih dahulu.
+              </p>
+              <a
+                href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20jadwal%20Terapi%20Bekam%20Sunnah..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+              >
+                <PhoneCall size={16} />
+                <span>Reservasi via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin reservasi terapi Bekam Sunnah..." />
+</BaseLayout>

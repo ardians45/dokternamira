@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { Home, CheckCircle2, MapPin, PhoneCall, ShieldCheck, HeartPulse, Clock } from 'lucide-react';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Dokter Homecare & Homevisit Malang",
+  "description": "Layanan kunjungan dokter umum dan penanganan medis langsung di rumah pasien wilayah Malang.",
+  "procedureType": "http://schema.org/NonSurgicalProcedure",
+  "location": {
+    "@type": "Place",
+    "name": "Praktek Dokter Namira Malang",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Malang",
+      "addressRegion": "Jawa Timur",
+      "addressCountry": "ID"
+    }
+  }
+};
+---
+
+<BaseLayout
+  title="Layanan Dokter Homecare & Homevisit Malang - Dr. Namira"
+  description="Jasa dokter datang ke rumah (homecare/homevisit) di wilayah Malang (Merjosari, Dinoyo, Lowokwaru, Blimbing). Perawatan medis profesional & nyaman oleh Dokter Namira."
+  schemaData={pageSchema}
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Home size={14} class="text-emerald-400" />
+            <span>Dokter Datang Ke Rumah • Area Malang & Sekitarnya</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Layanan Dokter Homecare & Homevisit di Malang
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Pemeriksaan medis dan perawatan dokter langsung di kenyamanan rumah Anda. Solusi aman dan ramah untuk pasien lansia, pemulihan pasca rawat, atau keterbatasan mobilitas.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20layanan%20Homecare%2FHomevisit%20ke%20rumah..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Pesan Dokter Homecare via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Main Explanation Column -->
+          <div class="lg:col-span-8 space-y-8">
+            
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Kapan Anda Membutuhkan Dokter Homecare?</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Layanan Homecare Dokter Namira dirancang khusus bagi pasien yang kesulitan untuk bepergian menuju tempat praktik atau rumah sakit. Tim dokter kami siap mendatangi kediaman Anda di wilayah Malang untuk memberikan penanganan medis yang cepat dan penuh perhatian.
+              </p>
+            </div>
+
+            <!-- List of Homecare Services -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-slate-800">Tindakan Medis yang Dapat Dilakukan di Rumah:</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Pemeriksaan Fisik Umum</strong>
+                    <span>Pemeriksaan vital (tensi, gula darah, suhu, asam urat) dan konsultasi penyakit umum.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Perawatan Luka & Ganti Balut</strong>
+                    <span>Perawatan luka diabetes, luka pasca operasi, atau luka tekan secara steril.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Pemasangan/Ganti Selang/Kateter</strong>
+                    <span>Tindakan medis khusus untuk pasien lansia atau dalam perawatan jangka panjang.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-teal-soft shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Terapi Infus Booster & Imun</strong>
+                    <span>Pemberian terapi vitamin/booster di rumah untuk efisiensi waktu pasien.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coverage Area Section -->
+            <div class="p-6 bg-teal-light/50 rounded-2xl border border-teal-light space-y-3">
+              <h3 class="text-lg font-bold text-teal-deep flex items-center space-x-2">
+                <MapPin size={20} class="text-teal-soft" />
+                <span>Wilayah Jangkauan Homecare Dokter Namira Malang</span>
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Kami melayani kunjungan rumah di berbagai area utama Malang, antara lain:
+              </p>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-semibold text-teal-deep">
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Merjosari</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Dinoyo</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Lowokwaru</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Tlogomas</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Dau</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Blimbing</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Sukun</div>
+                <div class="bg-white p-2 rounded border border-teal-soft/20 text-center">Klojen</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar Booking Card -->
+          <div class="lg:col-span-4">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
+              <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
+                Reservasi Homecare
+              </h3>
+              
+              <div class="space-y-3 text-xs text-slate-600">
+                <div class="flex items-center space-x-2">
+                  <Clock size={16} class="text-teal-soft shrink-0" />
+                  <span>Jadwal Kunjungan: Sesuai Kesepakatan WA</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <ShieldCheck size={16} class="text-teal-soft shrink-0" />
+                  <span>Peralatan Medis Steril Dibawa Dokter</span>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a
+                  href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20bertanya%20tarif%20dan%20jadwal%20Homecare%20ke%20alamat..."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+                >
+                  <PhoneCall size={16} />
+                  <span>Chat WA untuk Reservasi</span>
+                </a>
+              </div>
+
+              <p class="text-[11px] text-slate-400 text-center">
+                *Estimasi biaya transportasi & tindakan disesuaikan jarak lokasi rumah.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin reservasi layanan Dokter Homecare ke rumah..." />
+</BaseLayout>

@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/React/WhatsAppFloat';
+import PricelistFilter from '../components/React/PricelistFilter';
+import { Tag, PhoneCall, CheckCircle2, AlertCircle } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Informasi Biaya & Pricelist Layanan - Dokter Namira Malang"
+  description="Transparansi informasi estimasi biaya konsultasi dokter umum, tarif homecare, bekam medis, dan treatment kecantikan syar'i di Malang."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Tag size={14} class="text-emerald-400" />
+            <span>Transparansi Tarif Pelayanan</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Informasi Estimasi Biaya Layanan
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Komitmen kami untuk memberikan kejujuran dan keterbukaan tarif medis sebelum Anda memutuskan melakukan perawatan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+          <h2 class="text-lg font-bold text-teal-deep border-b border-slate-200 pb-2">Panduan Biaya & Tarif Medis</h2>
+          <div class="space-y-3 text-xs text-slate-700 leading-relaxed">
+            <p>
+              Estimasi biaya perawatan medis di Praktek Dokter Namira bervariasi bergantung pada jenis tindakan yang diberikan, obat-obatan yang diresepkan, serta jarak tempuh lokasi kunjungan untuk layanan homecare.
+            </p>
+            <div class="p-4 bg-teal-light/50 rounded-xl border border-teal-soft/30 flex items-start space-x-3 text-teal-deep">
+              <AlertCircle size={20} class="shrink-0 mt-0.5" />
+              <div>
+                <strong class="block font-bold">Catatan Penting Data Client:</strong>
+                <span>Untuk mendapatkan rincian tarif terbaru secara resmi, silakan menghubungi admin kami langsung via WhatsApp. Kami selalu mengonfirmasi total biaya tindakan sebelum obat atau terapi diberikan.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Pricelist Filter -->
+        <div class="space-y-6">
+          <div class="text-center space-y-2">
+            <h2 class="text-2xl font-bold text-teal-deep">Daftar Tarif Treatment & Perawatan</h2>
+            <p class="text-xs text-slate-600">Brosur Resmi Syar'i Beauty Care & Bekam Medis Praktek Dokter Namira</p>
+          </div>
+
+          <PricelistFilter client:load />
+        </div>
+
+        <div class="text-center pt-4">
+          <a
+            href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20bertanya%20detail%20estimasi%20biaya%20layanan..."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-md text-xs transition-colors"
+          >
+            <PhoneCall size={16} />
+            <span>Tanyakan Detail Biaya via WA</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin bertanya estimasi biaya layanan..." />
+</BaseLayout>

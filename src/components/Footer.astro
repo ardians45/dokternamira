@@ -1,0 +1,89 @@
+---
+import { MapPin, Phone, Mail, Clock, ShieldCheck, Heart } from 'lucide-react';
+---
+
+<footer class="bg-teal-deep text-white pt-16 pb-8 border-t border-teal-hover">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-teal-hover/50">
+      
+      <!-- Col 1: Brand & Legal Info -->
+      <div class="space-y-4">
+        <a href="/" class="inline-block bg-white p-2 rounded-xl hover:scale-105 transition-transform shadow-md">
+          <img
+            src="/logo-dokter-namira.png"
+            alt="Logo Praktek Dokter Namira"
+            class="h-10 sm:h-12 w-auto object-contain"
+          />
+        </a>
+        <p class="text-xs text-slate-200 leading-relaxed">
+          Praktek dokter umum terpercaya di Malang. Menyediakan layanan pemeriksaan medis dasar, dokter homevisit ke rumah, terapi bekam medis, infus booster, dan perawatan IMS dengan privasi terjamin.
+        </p>
+        <div class="flex items-center space-x-2 text-xs text-teal-light font-medium pt-2">
+          <ShieldCheck size={16} class="text-emerald-400" />
+          <span>Praktik Resmi Terdaftar SIP Dokter</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Layanan Medis</h4>
+        <ul class="space-y-2 text-xs text-slate-200">
+          <li><a href="/layanan/homecare-malang" class="hover:text-teal-soft transition-colors">Dokter Homecare Malang</a></li>
+          <li><a href="/layanan/infeksi-menular-seksual" class="hover:text-teal-soft transition-colors">Konsultasi IMS (Privat)</a></li>
+          <li><a href="/layanan/infus-booster-vitamin" class="hover:text-teal-soft transition-colors">Infus Booster & Vitamin</a></li>
+          <li><a href="/layanan/bekam-sunnah-fashdu" class="hover:text-teal-soft transition-colors">Bekam Sunnah & Fashdu</a></li>
+          <li><a href="/layanan/syari-beauty-care" class="hover:text-teal-soft transition-colors">Syar'i Beauty Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Area Layanan Local SEO -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Jangkauan Homecare</h4>
+        <p class="text-xs text-slate-200 leading-relaxed">
+          Layanan Kunjungan Dokter Homecare melayani wilayah Malang & sekitarnya:
+        </p>
+        <ul class="grid grid-cols-2 gap-1 text-xs text-slate-300">
+          <li>• Merjosari</li>
+          <li>• Dinoyo</li>
+          <li>• Lowokwaru</li>
+          <li>• Tlogomas</li>
+          <li>• Dau</li>
+          <li>• Blimbing</li>
+          <li>• Sukun</li>
+          <li>• Klojen</li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact & Hours -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Kontak & Lokasi</h4>
+        <ul class="space-y-2.5 text-xs text-slate-200">
+          <li class="flex items-start space-x-2">
+            <MapPin size={16} class="text-teal-soft shrink-0 mt-0.5" />
+            <span>Ruko Perumahan Ragali Residence, Jl. Tirto Joyo No. 119-69, Merjosari, Lowokwaru, Malang 65144</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <Phone size={16} class="text-teal-soft shrink-0" />
+            <span>0852-7000-1948 / 0858-1980-0843</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <Clock size={16} class="text-teal-soft shrink-0" />
+            <span>Buka Setiap Hari: 06.00 - 20.00 WIB</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Medical Disclaimer & Copyright -->
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-300 space-y-4 md:space-y-0">
+      <div class="max-w-2xl text-center md:text-left text-slate-300 leading-relaxed">
+        <strong class="text-white">Medical Disclaimer:</strong> Informasi di website ini disajikan untuk keperluan edukasi dan panduan layanan. Informasi ini bukan merupakan diagnosis medis independen dan tidak menggantikan pemeriksaan dokter secara langsung.
+      </div>
+      <div class="text-center md:text-right font-medium">
+        &copy; {new Date().getFullYear()} Praktek Dokter Namira Malang. All Rights Reserved.
+      </div>
+    </div>
+
+  </div>
+</footer>

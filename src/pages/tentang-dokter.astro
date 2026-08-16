@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/React/WhatsAppFloat';
+import { Stethoscope, ShieldCheck, Award, Heart, CheckCircle2, PhoneCall } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Profil Dr. Namira Farhayati Lubis | Dokter Umum Malang"
+  description="Latar belakang medis, profil lengkap, dan komitmen pelayanan kesehatan Dr. Namira Farhayati Lubis di Praktek Dokter Namira Malang."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Stethoscope size={14} class="text-emerald-400" />
+            <span>Profil Tenaga Medis Penanggung Jawab</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Dr. Namira Farhayati Lubis
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Dokter Umum penanggung jawab praktik medis, layanan kunjungan homecare, serta konsultan kesehatan masyarakat Malang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-50 p-8 sm:p-12 rounded-3xl border border-slate-200 space-y-8">
+          
+          <div class="space-y-4">
+            <h2 class="text-2xl font-bold text-teal-deep">Dedikasi untuk Kesehatan Pasien</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Dr. Namira Farhayati Lubis aktif memberikan pelayanan kesehatan medis primer untuk warga Malang dan sekitarnya. Dengan pendekatan holistik yang memadukan keahlian kedokteran medis modern, kenyamanan pasien, dan komunikasi empatik, beliau siap membantu menjaga kesehatan Anda dan keluarga.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 space-y-2">
+              <strong class="block text-sm text-teal-deep font-bold">Izin Praktik Resmi (SIP)</strong>
+              <p class="text-slate-600">Surat Izin Praktik Dokter Umum terdaftar dan sah melayani pasien di wilayah hukum Kota Malang.</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-100 space-y-2">
+              <strong class="block text-sm text-teal-deep font-bold">Fokus Layanan Medis</strong>
+              <p class="text-slate-600">Pemeriksaan umum, dokter homevisit ke rumah, terapi bekam medis higienis, dan konsultasi privasi IMS.</p>
+            </div>
+          </div>
+
+          <div class="text-center pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20berkonsultasi%20langsung..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-md text-xs transition-colors"
+            >
+              <PhoneCall size={16} />
+              <span>Konsultasi Langsung via WA</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle />
+</BaseLayout>

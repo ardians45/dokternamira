@@ -1,0 +1,569 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/React/WhatsAppFloat';
+import TestimonialSlider from '../components/React/TestimonialSlider';
+import {
+  Stethoscope,
+  Home,
+  ShieldCheck,
+  Droplet,
+  Sparkles,
+  HeartPulse,
+  CheckCircle2,
+  MapPin,
+  Clock,
+  ChevronRight,
+  PhoneCall,
+  UserCheck,
+  Activity,
+  Award,
+  Microscope,
+  Syringe,
+  HeartHandshake,
+  FileCheck2,
+  Sparkle,
+  ShieldAlert,
+  Flame,
+  BadgeCheck,
+  CalendarCheck,
+  Check,
+  ArrowRight,
+  Shield,
+  Star
+} from 'lucide-react';
+---
+
+<BaseLayout
+  title="Praktik Dokter Umum & Homecare di Malang - Dr. Namira Farhayati Lubis"
+  description="Layanan konsultasi dokter, homecare, dan perawatan kesehatan di Malang dengan pelayanan yang nyaman dan profesional."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-white pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: Typography & Content -->
+          <div class="lg:col-span-6 space-y-8">
+            <div class="space-y-4">
+              <p class="text-teal-deep font-bold text-sm tracking-widest uppercase">
+                Dr. Namira Farhayati Lubis
+              </p>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                Praktik Dokter Umum & <span class="text-teal-deep">Homecare</span> di Malang
+              </h1>
+              <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg font-sans">
+                Layanan konsultasi medis profesional, kunjungan dokter ke rumah (homecare), dan perawatan kesehatan dasar dengan mengutamakan kenyamanan serta privasi Anda.
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-2 flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center space-x-2 bg-teal-deep hover:bg-teal-hover text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors"
+              >
+                <PhoneCall size={18} />
+                <span>Konsultasi via WhatsApp</span>
+              </a>
+              <a
+                href="#layanan-utama"
+                class="inline-flex items-center justify-center space-x-2 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 px-8 py-4 text-sm font-bold transition-colors"
+              >
+                <span>Lihat Layanan</span>
+                <ChevronRight size={16} />
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Photography -->
+          <div class="lg:col-span-6">
+            <div class="relative">
+              <!-- Simple structural offset box -->
+              <div class="absolute inset-0 translate-x-4 translate-y-4 bg-teal-light/50 hidden md:block"></div>
+              <img
+                src="/dokter-namira-portrait.jpg"
+                alt="Dr. Namira Farhayati Lubis"
+                class="relative z-10 w-full h-[500px] md:h-[600px] object-cover object-top"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST SECTION (Typographic Grid) -->
+    <section class="border-b border-slate-200 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          
+          <div class="py-8 md:px-6 lg:px-8 space-y-2">
+            <div class="flex items-center space-x-2 text-teal-deep">
+              <BadgeCheck size={20} />
+              <h4 class="font-display font-extrabold text-sm uppercase tracking-wider">SIP Aktif</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+              Praktik oleh dokter yang terdaftar resmi dan memiliki Surat Izin Praktik (SIP).
+            </p>
+          </div>
+
+          <div class="py-8 md:px-6 lg:px-8 space-y-2">
+            <div class="flex items-center space-x-2 text-teal-deep">
+              <ShieldCheck size={20} />
+              <h4 class="font-display font-extrabold text-sm uppercase tracking-wider">Privasi Pasien</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+              Kerahasiaan data dan rekam medis pasien dijaga sesuai standar etika kedokteran.
+            </p>
+          </div>
+
+          <div class="py-8 md:px-6 lg:px-8 space-y-2">
+            <div class="flex items-center space-x-2 text-teal-deep">
+              <Syringe size={20} />
+              <h4 class="font-display font-extrabold text-sm uppercase tracking-wider">Peralatan Higienis</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+              Peralatan steril sekali pakai untuk menjamin standar kebersihan dan keamanan medis.
+            </p>
+          </div>
+
+          <div class="py-8 md:px-6 lg:px-8 space-y-2">
+            <div class="flex items-center space-x-2 text-teal-deep">
+              <HeartHandshake size={20} />
+              <h4 class="font-display font-extrabold text-sm uppercase tracking-wider">Homecare</h4>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed font-sans">
+              Layanan kunjungan dokter langsung ke rumah Anda untuk pasien rawat jalan.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- H2: Layanan Kesehatan yang Kami Sediakan -->
+    <section class="py-16 md:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          
+          <!-- Sticky Section Title (4 cols) -->
+          <div class="lg:col-span-4 lg:sticky lg:top-32 self-start space-y-4">
+            <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Pemeriksaan Dasar</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
+              Layanan Medis <br class="hidden lg:inline"/>Umum
+            </h2>
+            <p class="text-sm text-slate-600 font-sans leading-relaxed">
+              Cakupan pemeriksaan umum, laboratorium sederhana, dan tindakan medis sesuai keluhan pasien secara personal dan menyeluruh.
+            </p>
+          </div>
+
+          <!-- Services List (8 cols) -->
+          <div class="lg:col-span-8">
+            <div class="divide-y divide-slate-100 border-t border-b border-slate-100">
+              
+              <!-- Service Category 1 -->
+              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="md:col-span-1">
+                  <h3 class="font-display font-extrabold text-lg text-slate-900">Konsultasi & Pemeriksaan</h3>
+                </div>
+                <div class="md:col-span-2">
+                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
+                    <li>• Konsultasi umum & Pemeriksaan fisik</li>
+                    <li>• Peresepan dan penggunaan obat medis</li>
+                    <li>• Kontrol tekanan darah & diabetes</li>
+                    <li>• Konsultasi ibu & anak, cek kehamilan dasar</li>
+                    <li>• Surat keterangan sakit, sehat, & berobat</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Service Category 2 -->
+              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="md:col-span-1">
+                  <h3 class="font-display font-extrabold text-lg text-slate-900">Tindakan Medis & Lab</h3>
+                </div>
+                <div class="md:col-span-2">
+                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
+                    <li>• Tes gula darah, kolesterol, asam urat (Stik)</li>
+                    <li>• Cek tensi (tekanan darah) akurat</li>
+                    <li>• Terapi Nebulizer (uap pernapasan)</li>
+                    <li>• Perawatan luka & Ganti balut steril</li>
+                    <li>• Pemasangan Kateter & NGT</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Service Category 3 -->
+              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="md:col-span-1">
+                  <h3 class="font-display font-extrabold text-lg text-slate-900">Layanan Khusus</h3>
+                </div>
+                <div class="md:col-span-2">
+                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
+                    <li>• Kunjungan Dokter ke Rumah (Homecare)</li>
+                    <li>• Bekam Sunnah & Terapi Fashdu</li>
+                    <li>• Infus Booster & Suntik Vitamin</li>
+                    <li>• Konsultasi Infeksi Menular Seksual (IMS)</li>
+                    <li>• Perawatan Wajah (Syar'i Beauty Care)</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- H2: Layanan Medis Utama -->
+    <section id="layanan-utama" class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-16 space-y-4">
+          <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Pilar Layanan</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
+            Layanan Medis <span class="text-teal-deep">Utama</span>
+          </h2>
+          <p class="text-slate-600 text-sm md:text-base font-sans leading-relaxed max-w-xl">
+            Layanan kesehatan spesifik unggulan dari Praktek Dokter Namira, dirancang dengan mengutamakan standar medis yang tepat, privasi, dan kenyamanan Anda.
+          </p>
+        </div>
+
+        <div class="space-y-12 lg:space-y-24">
+          
+          <!-- Homecare (Text Left, Img Right) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="lg:col-span-5 space-y-6 lg:order-1">
+              <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center">
+                <Home size={24} />
+              </div>
+              <h3 class="font-display font-extrabold text-2xl lg:text-3xl text-slate-900">Dokter Homecare & Homevisit</h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Layanan kunjungan dokter umum langsung ke rumah Anda. Solusi terbaik bagi pasien lansia, pasca operasi, atau mereka yang kesulitan bepergian ke fasilitas kesehatan.
+              </p>
+              <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider space-y-1">
+                <p>Area Layanan:</p>
+                <p class="text-teal-deep">Merjosari • Dinoyo • Lowokwaru • Tlogomas • Dau • Blimbing • Sukun • Klojen</p>
+              </div>
+              <div>
+                <a href="/layanan/homecare-malang" class="inline-flex items-center space-x-2 text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 px-6 py-3 transition-colors">
+                  <span>Pelajari Layanan Homecare</span>
+                  <ChevronRight size={16} />
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7 lg:order-2 bg-slate-200 aspect-[4/3] rounded-sm relative overflow-hidden flex items-center justify-center">
+                <span class="text-slate-400 font-bold tracking-widest text-sm uppercase text-center px-4">Placeholder Foto: Pemeriksaan Homecare</span>
+                <div class="absolute inset-0 bg-teal-900/5 mix-blend-multiply"></div>
+            </div>
+          </div>
+
+          <!-- IMS (Img Left, Text Right) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="lg:col-span-7 bg-slate-200 aspect-[4/3] rounded-sm relative overflow-hidden flex items-center justify-center">
+                <span class="text-slate-400 font-bold tracking-widest text-sm uppercase text-center px-4">Placeholder Foto: Konsultasi Pasien</span>
+                <div class="absolute inset-0 bg-teal-900/5 mix-blend-multiply"></div>
+            </div>
+            <div class="lg:col-span-5 space-y-6">
+              <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center">
+                <ShieldAlert size={24} />
+              </div>
+              <h3 class="font-display font-extrabold text-2xl lg:text-3xl text-slate-900">Konsultasi & Penanganan IMS</h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Layanan konsultasi terkait Infeksi Menular Seksual (IMS) yang 100% menjaga kerahasiaan identitas dan rekam medis Anda, dengan pendekatan komunikasi medis yang objektif tanpa penghakiman.
+              </p>
+              <div>
+                <a href="/layanan/infeksi-menular-seksual" class="inline-flex items-center space-x-2 text-sm font-bold text-white bg-slate-900 hover:bg-slate-800 px-6 py-3 transition-colors">
+                  <span>Pelajari Layanan IMS</span>
+                  <ChevronRight size={16} />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Infus & Bekam (Grid) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+            
+            <div class="border-t border-slate-200 pt-8 space-y-5">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-900 flex items-center justify-center">
+                  <Droplet size={20} />
+                </div>
+                <h3 class="font-display font-extrabold text-xl text-slate-900">Infus Booster & Vitamin</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Pemulihan stamina tubuh dan peningkatan daya tahan melalui asupan multivitamin intravena yang disesuaikan dengan kondisi medis Anda berdasarkan hasil konsultasi dokter.
+              </p>
+              <a href="/layanan/infus-booster-vitamin" class="inline-flex items-center space-x-2 text-sm font-bold text-teal-deep hover:text-teal-hover transition-colors">
+                <span>Selengkapnya</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+
+            <div class="border-t border-slate-200 pt-8 space-y-5">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-lg bg-teal-100 text-teal-900 flex items-center justify-center">
+                  <Flame size={20} />
+                </div>
+                <h3 class="font-display font-extrabold text-xl text-slate-900">Bekam Sunnah & Fashdu</h3>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Tindakan terapi bekam dan fashdu yang dilakukan dengan memastikan standar kebersihan tinggi. Kami menggunakan alat steril sekali pakai (single-use) demi menghindari risiko infeksi silang.
+              </p>
+              <a href="/layanan/bekam-sunnah-fashdu" class="inline-flex items-center space-x-2 text-sm font-bold text-teal-deep hover:text-teal-hover transition-colors">
+                <span>Selengkapnya</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Syari Care (Full Width Typographic Callout) -->
+          <div class="bg-pink-50 border border-pink-100 p-8 lg:p-12">
+             <div class="max-w-3xl space-y-5">
+                <span class="text-xs font-black text-pink-600 uppercase tracking-widest border-l-2 border-pink-600 pl-3">Khusus Muslimah/Wanita</span>
+                <h3 class="font-display font-extrabold text-2xl lg:text-3xl text-slate-900">Syar'i Beauty Care</h3>
+                <p class="text-sm text-slate-700 leading-relaxed font-sans">
+                  Layanan estetika medis dasar seperti Facial dan Peeling yang dirancang khusus untuk kenyamanan dan privasi wanita. Dilakukan di ruang tertutup khusus oleh tenaga medis wanita.
+                </p>
+                <a href="/layanan/syari-beauty-care" class="inline-flex items-center space-x-2 text-sm font-bold text-white bg-pink-600 hover:bg-pink-700 px-6 py-3 transition-colors mt-2">
+                  <span>Pelajari Perawatan Khusus Wanita</span>
+                  <ChevronRight size={16} />
+                </a>
+             </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- H2: Filosofi & Komitmen -->
+    <section class="py-16 md:py-24 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <div class="lg:col-span-5">
+            <div class="relative w-full aspect-[3/4] bg-teal-50">
+              <img
+                src="/dokter-namira-portrait.jpg"
+                alt="Foto Dokter Namira Farhayati Lubis"
+                class="w-full h-full object-cover object-top grayscale-[10%]"
+              />
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-6 lg:py-12">
+            <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Komitmen Kami</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 leading-tight">
+              Mengutamakan Kenyamanan Pasien
+            </h2>
+            <p class="text-sm md:text-base text-slate-600 leading-relaxed font-sans max-w-2xl">
+              Di Praktek Dokter Namira, kami percaya bahwa pelayanan medis terbaik diawali dengan mendengarkan pasien secara saksama. Baik saat Anda datang langsung ke tempat praktik maupun saat menerima layanan homecare, kami berkomitmen memberikan penjelasan medis yang transparan dan penanganan yang sangat berhati-hati.
+            </p>
+            
+            <ul class="space-y-4 pt-4 border-t border-slate-100">
+              <li class="flex items-start space-x-3 text-sm text-slate-700">
+                <Check size={20} class="text-teal-deep shrink-0 mt-0.5" />
+                <span><strong class="text-slate-900">Legalitas Terjamin:</strong> Memiliki Surat Izin Praktik (SIP) resmi untuk semua layanan.</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-700">
+                <Check size={20} class="text-teal-deep shrink-0 mt-0.5" />
+                <span><strong class="text-slate-900">Prosedur Higienis:</strong> Selalu menggunakan standar sterilisasi dan peralatan medis sekali pakai (single-use).</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-700">
+                <Check size={20} class="text-teal-deep shrink-0 mt-0.5" />
+                <span><strong class="text-slate-900">Edukasi Transparan:</strong> Pasien berhak tahu rencana terapi, tindakan, dan fungsi obat yang diberikan.</span>
+              </li>
+            </ul>
+
+            <div class="pt-6">
+              <a href="/tentang-dokter" class="inline-flex items-center space-x-2 text-sm font-bold text-teal-deep hover:text-teal-hover transition-colors">
+                <span>Baca Profil Dokter Selengkapnya</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- H2: Apa Kata Pasien Mengenai Dokter Namira? -->
+    <section class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 space-y-3">
+          <span class="text-xs font-black text-teal-soft uppercase tracking-widest">Testimonial Pasien</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-teal-deep">
+            Apa Kata Pasien Mengenai Dokter Namira?
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 font-sans">Dikutip langsung dari ulasan pasien di Google</p>
+        </div>
+
+        <TestimonialSlider client:load />
+
+      </div>
+    </section>
+
+    <!-- H2: Lokasi Praktik Dokter Namira di Merjosari, Malang -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <span class="text-xs font-black text-teal-soft uppercase tracking-widest">Akses & Jam Buka</span>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-teal-deep mt-1">
+                Lokasi Praktik Dokter Namira di Merjosari, Malang
+              </h2>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+              Tempat praktik kami berlokasi di Ruko Perumahan Ragali Residence, dekat kawasan kampus dan pemukiman Dinoyo/Lowokwaru.
+            </p>
+
+            <div class="space-y-4 text-xs sm:text-sm text-slate-700">
+              <div class="flex items-start space-x-3.5 p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-teal-light text-teal-deep flex items-center justify-center shrink-0">
+                  <MapPin size={20} />
+                </div>
+                <div>
+                  <h4 class="font-display font-bold text-slate-800 mb-0.5">Alamat:</h4>
+                  <p class="text-slate-600 leading-relaxed text-xs">Ruko Perumahan Ragali Residence, Jl. Tirto Joyo No. 119-69, Merjosari, Lowokwaru, Kota Malang, Jawa Timur 65144</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3.5 p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-teal-light text-teal-deep flex items-center justify-center shrink-0">
+                  <Clock size={20} />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-2 mb-0.5">
+                    <h4 class="font-display font-bold text-slate-800">Jam Operasional:</h4>
+                    <span class="inline-flex items-center space-x-1 bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full text-[10px] font-bold">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                      <span>Buka</span>
+                    </span>
+                  </div>
+                  <p class="text-slate-600 text-xs">Jam Praktik: <strong class="text-teal-deep">06.00 - 20.00 WIB</strong><br/><span class="mt-1 inline-block">Layanan Homecare: <span class="text-slate-500">berdasarkan ketersediaan/jadwal</span></span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a
+                href="https://maps.app.goo.gl/4Jq9rNgjSmcEqxQR6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-deep to-teal-hover hover:opacity-95 text-white px-6 py-3.5 rounded-2xl text-xs sm:text-sm font-bold transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
+              >
+                <MapPin size={18} />
+                <span>Buka Petunjuk Arah di Google Maps</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="w-full h-80 sm:h-96 rounded-3xl sm:rounded-[2.5rem] bg-slate-100 border border-slate-200 overflow-hidden shadow-xl relative">
+              <iframe
+                title="Peta Lokasi Dokter Namira Malang"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4988775438844!2d112.6024194!3d-7.9400015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78826a7e028889%3A0x6b40285a85012345!2sJl.%20Tirto%20Joyo%2C%20Merjosari%2C%20Kec.%20Lowokwaru%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="absolute inset-0 w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- H2: Pertanyaan yang Sering Ditanyakan (FAQ) -->
+    <section class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-12 space-y-4">
+          <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">FAQ</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
+            Pertanyaan Umum
+          </h2>
+        </div>
+
+        <div class="divide-y divide-slate-200 border-t border-b border-slate-200">
+          <div class="py-6">
+            <h3 class="font-display font-extrabold text-base text-slate-900 mb-2">Bagaimana cara memesan layanan Dokter Homecare ke rumah?</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Anda cukup menghubungi kami melalui tombol WhatsApp yang tersedia di website ini. Tuliskan keluhan singkat, alamat rumah lengkap di area Malang, serta jadwal kunjungan yang diinginkan. Tim kami akan mengonfirmasi jadwal dokter secara cepat.
+            </p>
+          </div>
+
+          <div class="py-6">
+            <h3 class="font-display font-extrabold text-base text-slate-900 mb-2">Apakah privasi konsultasi Infeksi Menular Seksual (IMS) terjamin?</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Sangat terjamin. Seluruh konsultasi dan data rekam medis pasien dilindungi penuh sesuai standar etika kedokteran dan dilayani dengan objektivitas medis tanpa penghakiman.
+            </p>
+          </div>
+
+          <div class="py-6">
+            <h3 class="font-display font-extrabold text-base text-slate-900 mb-2">Apakah peralatan bekam yang digunakan aman dan higienis?</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Ya, seluruh prosedur bekam medis dan fashdu menggunakan jarum steril dan peralatan sekali pakai (single-use) yang dibuka langsung di hadapan pasien untuk mencegah risiko infeksi silang.
+            </p>
+          </div>
+          
+          <div class="py-6">
+            <h3 class="font-display font-extrabold text-base text-slate-900 mb-2">Berapa estimasi biaya layanan dan konsultasi dokter?</h3>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Biaya layanan menyesuaikan jenis pemeriksaan dan tindakan. Hubungi WhatsApp untuk mendapatkan informasi biaya sebelum reservasi, atau kunjungi halaman <a href="/biaya-layanan" class="text-teal-deep font-semibold underline underline-offset-4 hover:text-teal-hover">Biaya Layanan</a> kami.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- H2: Butuh Konsultasi Dokter? (Bottom CTA) -->
+    <section class="py-20 md:py-32 bg-slate-900 text-white text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight">
+          Siap Untuk Berkonsultasi?
+        </h2>
+        <p class="text-sm md:text-base text-slate-300 font-sans leading-relaxed max-w-xl mx-auto">
+          Hubungi Dokter Namira sekarang melalui WhatsApp untuk menanyakan layanan, jadwal praktik, atau ketersediaan homecare di area Malang.
+        </p>
+        <div class="pt-4">
+          <a
+            href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20kesehatan..."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center space-x-2 bg-teal-deep hover:bg-teal-hover text-white font-extrabold px-10 py-5 text-sm uppercase tracking-wider transition-colors w-full sm:w-auto"
+          >
+            <PhoneCall size={18} />
+            <span>Konsultasi via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle />
+</BaseLayout>
+
+

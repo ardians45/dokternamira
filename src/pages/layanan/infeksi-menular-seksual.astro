@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { ShieldCheck, Lock, Heart, CheckCircle2, PhoneCall, FileText } from 'lucide-react';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Konsultasi & Penanganan Infeksi Menular Seksual (IMS)",
+  "description": "Layanan medis dan konsultasi privat untuk keluhan penyakit menular seksual di Malang.",
+  "location": {
+    "@type": "Place",
+    "name": "Praktek Dokter Namira Malang"
+  }
+};
+---
+
+<BaseLayout
+  title="Konsultasi & Pengobatan IMS Malang (Privasi Terjaga) - Dr. Namira"
+  description="Layanan medis & konsultasi Infeksi Menular Seksual (IMS) di Malang. Penanganan profesional oleh Dokter Namira, dijamin rahasia, dan tanpa stigma."
+  schemaData={pageSchema}
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Lock size={14} class="text-emerald-400" />
+            <span>Kerahasiaan Pasien Dijamin 100% • Etika Kedokteran</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Konsultasi & Penanganan Medis IMS di Malang
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Layanan medis yang tenang, empati, dan profesional. Kami menyediakan ruang konsultasi tertutup dan penanganan medis gejala Infeksi Menular Seksual (IMS) tanpa stigma.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20berkonsultasi%20privasi%20mengenai%20layanan%20kesehatan%20IMS..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Konsultasi Privasi via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-8 space-y-8">
+            
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Mengapa Pilih Konsultasi IMS di Dokter Namira?</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Kami memahami bahwa kekhawatiran terhadap keluhan organ reproduksi atau infeksi menular seksual seringkali memicu kecemasan tinggi dan rasa enggan untuk berobat. Di Praktek Dokter Namira, konsultasi Anda ditangani langsung oleh dokter umum dengan komitmen kerahasiaan penuh.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+              <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center font-bold">
+                  <Lock size={18} />
+                </div>
+                <strong class="block text-slate-800 text-sm">Jaminan Kerahasiaan 100%</strong>
+                <p class="text-slate-600 leading-relaxed">Identitas, rekam medis, dan hasil diskusi konsultasi dilindungi penuh sesuai kode etik rahasia kedokteran.</p>
+              </div>
+
+              <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center font-bold">
+                  <Heart size={18} />
+                </div>
+                <strong class="block text-slate-800 text-sm">Pendekatan Non-Judgmental</strong>
+                <p class="text-slate-600 leading-relaxed">Fokus utama kami adalah kesehatan dan kesembuhan Anda tanpa menghakimi latar belakang atau kondisi Anda.</p>
+              </div>
+            </div>
+
+            <div class="p-6 bg-teal-light/40 rounded-2xl border border-teal-light space-y-3">
+              <h3 class="font-bold text-sm text-teal-deep">Alur Konsultasi Medis IMS:</h3>
+              <ol class="list-decimal list-inside text-xs text-slate-700 space-y-2 leading-relaxed">
+                <li><strong class="text-slate-800">Konsultasi Awal via WA:</strong> Kirimkan pesan singkat untuk menentukan jadwal temu privat.</li>
+                <li><strong class="text-slate-800">Pemeriksaan Dokter:</strong> Evaluasi gejala klinis secara teliti di ruang periksa tertutup.</li>
+                <li><strong class="text-slate-800">Rencana Terapi Medis:</strong> Pemberian resep obat yang tepat atau rujukan laboratorium jika diperlukan.</li>
+              </ol>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
+              <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
+                Konsultasi Tertutup
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Jangan ragu untuk mengonsultasikan gejala awal sebelum kondisi memberat. Kesehatan Anda adalah hal terpenting.
+              </p>
+              <a
+                href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20privasi%20mengenai%20layanan%20kesehatan%20IMS..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+              >
+                <Lock size={16} />
+                <span>Chat WA Privasi Rahasia</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin berkonsultasi privasi mengenai layanan kesehatan IMS..." />
+</BaseLayout>

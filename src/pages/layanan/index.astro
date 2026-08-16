@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat.jsx';
+import { Stethoscope, Home, ShieldCheck, Droplet, HeartPulse, Sparkles, ChevronRight } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Daftar Layanan Medis Complete - Praktek Dokter Namira Malang"
+  description="Indeks lengkap seluruh layanan kesehatan Praktek Dokter Namira Malang: Dokter Umum, Homecare, Konsultasi IMS Privat, Infus Booster, Bekam Medis, dan Syar'i Beauty Care."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Stethoscope size={14} class="text-emerald-400" />
+            <span>Indeks Layanan Kesehatan Medis</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Layanan Medis Praktek Dokter Namira
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Temukan solusi penanganan medis komprehensif yang dirancang sesuai kebutuhan Anda di Malang.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <a href="/layanan/homecare-malang" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
+            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
+              <Home size={20} />
+            </div>
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Dokter Homecare & Homevisit</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Kunjungan dokter dan perawatan medis langsung di rumah Anda area Malang.</p>
+            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
+              <span>Pelajari Selengkapnya</span>
+              <ChevronRight size={14} />
+            </div>
+          </a>
+
+          <a href="/layanan/infeksi-menular-seksual" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
+            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
+              <ShieldCheck size={20} />
+            </div>
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Konsultasi & Pengobatan IMS</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Penanganan medis gejala IMS secara privat, rahasia, dan tanpa stigma.</p>
+            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
+              <span>Pelajari Selengkapnya</span>
+              <ChevronRight size={14} />
+            </div>
+          </a>
+
+          <a href="/layanan/infus-booster-vitamin" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
+            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
+              <Droplet size={20} />
+            </div>
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Infus Booster & Vitamin</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Terapi cairan multivitamin untuk kebugaran dan pemulihan stamina.</p>
+            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
+              <span>Pelajari Selengkapnya</span>
+              <ChevronRight size={14} />
+            </div>
+          </a>
+
+          <a href="/layanan/bekam-sunnah-fashdu" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
+            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
+              <HeartPulse size={20} />
+            </div>
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Bekam Sunnah & Fashdu</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Terapi bekam medis higienis dengan jarum dan cup sekali pakai.</p>
+            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
+              <span>Pelajari Selengkapnya</span>
+              <ChevronRight size={14} />
+            </div>
+          </a>
+
+          <a href="/layanan/syari-beauty-care" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group md:col-span-2 lg:col-span-2">
+            <div class="w-10 h-10 rounded-xl bg-pink-600 text-white flex items-center justify-center">
+              <Sparkles size={20} />
+            </div>
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-pink-600 transition-colors">Syar'i Beauty Care</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Perawatan kesehatan kulit wajah (facial/peeling) khusus wanita yang aman & privat.</p>
+            <div class="text-xs font-bold text-pink-600 flex items-center space-x-1 pt-2">
+              <span>Pelajari Selengkapnya</span>
+              <ChevronRight size={14} />
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle />
+</BaseLayout>

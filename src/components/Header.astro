@@ -1,0 +1,163 @@
+---
+import { Phone, MapPin, Clock, Stethoscope, ChevronRight, Menu, X, Home, ShieldAlert, Droplet, Flame, Sparkle } from 'lucide-react';
+---
+
+<!-- Main Navbar -->
+<header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100/80 transition-all">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
+    <!-- Brand Logo & Text -->
+    <a href="/" class="flex items-center space-x-3 group">
+      <img
+        src="/logo-dokter-namira.png"
+        alt="Logo Praktek Dokter Namira"
+        class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+      />
+      <div class="flex flex-col">
+        <span class="font-display font-extrabold text-slate-800 text-base sm:text-lg leading-none tracking-tight group-hover:text-teal-deep transition-colors">
+          Dokter Namira
+        </span>
+        <span class="text-[9px] sm:text-[10px] font-bold text-teal-soft uppercase tracking-widest mt-0.5">
+          Praktik Dokter Umum
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden lg:flex items-center space-x-7 text-xs xl:text-sm font-semibold text-slate-700">
+      <a href="/" class="hover:text-teal-deep transition-colors font-medium">Beranda</a>
+      
+      <div class="relative group py-6">
+        <a href="/layanan/" class="hover:text-teal-deep transition-colors flex items-center space-x-1 font-medium">
+          <span>Layanan Utama</span>
+          <ChevronRight size={14} class="transform group-hover:rotate-90 transition-transform text-slate-400" />
+        </a>
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 top-full w-64 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-slate-100 p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+          <a href="/layanan/homecare-malang" class="flex items-center space-x-2.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-slate-700 hover:bg-teal-light hover:text-teal-deep transition-colors">
+            <span class="w-6 h-6 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center text-xs"><Home size={14} /></span>
+            <span>Dokter Homecare Malang</span>
+          </a>
+          <a href="/layanan/infeksi-menular-seksual" class="flex items-center space-x-2.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-slate-700 hover:bg-teal-light hover:text-teal-deep transition-colors">
+            <span class="w-6 h-6 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center text-xs"><ShieldAlert size={14} /></span>
+            <span>Konsultasi & Terapi IMS</span>
+          </a>
+          <a href="/layanan/infus-booster-vitamin" class="flex items-center space-x-2.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-slate-700 hover:bg-teal-light hover:text-teal-deep transition-colors">
+            <span class="w-6 h-6 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center text-xs"><Droplet size={14} /></span>
+            <span>Infus Booster Vitamin</span>
+          </a>
+          <a href="/layanan/bekam-sunnah-fashdu" class="flex items-center space-x-2.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-slate-700 hover:bg-teal-light hover:text-teal-deep transition-colors">
+            <span class="w-6 h-6 rounded-lg bg-teal-light text-teal-deep flex items-center justify-center text-xs"><Flame size={14} /></span>
+            <span>Bekam Sunnah & Fashdu</span>
+          </a>
+          <a href="/layanan/syari-beauty-care" class="flex items-center space-x-2.5 px-3.5 py-2.5 rounded-xl text-xs font-medium text-slate-700 hover:bg-teal-light hover:text-teal-deep transition-colors">
+            <span class="w-6 h-6 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center text-xs"><Sparkle size={14} /></span>
+            <span>Syar'i Beauty Care</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/tentang-dokter" class="hover:text-teal-deep transition-colors font-medium">Tentang Dokter</a>
+      <a href="/jadwal-lokasi" class="hover:text-teal-deep transition-colors font-medium">Jadwal & Lokasi</a>
+      <a href="/biaya-layanan" class="hover:text-teal-deep transition-colors font-medium">Biaya Layanan</a>
+    </nav>
+
+    <!-- Header Action Button & Mobile Menu Trigger -->
+    <div class="flex items-center space-x-3">
+      <a
+        href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20layanan%20kesehatan..."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-teal-deep to-teal-hover hover:opacity-95 text-white px-4 sm:px-5 py-2.5 rounded-full text-xs font-bold transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5"
+      >
+        <Stethoscope size={15} />
+        <span>Konsultasi WA</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <Menu size={24} id="menu-icon-open" />
+        <X size={24} id="menu-icon-close" class="hidden" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu Drawer -->
+  <div id="mobile-nav" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-2xl transition-all">
+    <div class="space-y-1">
+      <a href="/" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        Beranda
+      </a>
+      <div class="px-3 py-2 text-xs font-black text-teal-soft uppercase tracking-wider">
+        Layanan Medis
+      </div>
+      <a href="/layanan/homecare-malang" class="flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        <Home size={16} class="text-teal-soft" />
+        <span>Dokter Homecare Malang</span>
+      </a>
+      <a href="/layanan/infeksi-menular-seksual" class="flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        <ShieldAlert size={16} class="text-teal-soft" />
+        <span>Konsultasi & Terapi IMS</span>
+      </a>
+      <a href="/layanan/infus-booster-vitamin" class="flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        <Droplet size={16} class="text-teal-soft" />
+        <span>Infus Booster & Vitamin</span>
+      </a>
+      <a href="/layanan/bekam-sunnah-fashdu" class="flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        <Flame size={16} class="text-teal-soft" />
+        <span>Bekam Sunnah & Fashdu</span>
+      </a>
+      <a href="/layanan/syari-beauty-care" class="flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium text-slate-600 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        <Sparkle size={16} class="text-pink-400" />
+        <span>Syar'i Beauty Care</span>
+      </a>
+      <a href="/tentang-dokter" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        Tentang Dokter
+      </a>
+      <a href="/jadwal-lokasi" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        Jadwal & Lokasi
+      </a>
+      <a href="/biaya-layanan" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-teal-light hover:text-teal-deep transition-colors">
+        Biaya Layanan
+      </a>
+    </div>
+
+    <div class="pt-2">
+      <a
+        href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20layanan%20kesehatan..."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+      >
+        <Phone size={15} />
+        <span>Hubungi WhatsApp Dokter</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  if (menuBtn && mobileNav && iconOpen && iconClose) {
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileNav.classList.contains('hidden');
+      if (isHidden) {
+        mobileNav.classList.remove('hidden');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        mobileNav.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+    });
+  }
+</script>
+

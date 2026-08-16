@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { Droplet, CheckCircle2, PhoneCall, ShieldCheck, Zap } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Infus Booster Vitamin & Immune Booster Malang - Dokter Namira"
+  description="Layanan infus booster vitamin C dan daya tahan tubuh di Malang. Dipandu oleh dokter umum resmi dengan prosedur steril dan aman."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Droplet size={14} class="text-emerald-400" />
+            <span>Terapi Infus Booster Vitamin • Sediaan BPOM</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Infus Booster Vitamin & Terapi Kebugaran di Malang
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Penyegaran daya tahan tubuh, kebugaran, dan pemulihan stamina pasca sakit melalui terapi infus multivitamin. Ditangani secara profesional oleh Dokter Namira.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20layanan%20Infus%20Booster%20Vitamin..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Reservasi Infus Booster via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-8 space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Manfaat Terapi Infus Booster Vitamin</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Aktivitas padat, pola tidur tidak teratur, atau masa pemulihan dapat menurunkan kadar vitalitas tubuh. Terapi cairan infus vitamin memungkinkan penyerapan nutrisi mikronutrien secara langsung dan efisien di bawah pengawasan medis.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1.5">
+                <strong class="block text-slate-800 text-sm">⚡ Immune & Stamina Booster</strong>
+                <p class="text-slate-600 leading-relaxed">Membantu meningkatkan daya tahan tubuh saat kondisi kelelahan parah atau perubahan cuaca.</p>
+              </div>
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1.5">
+                <strong class="block text-slate-800 text-sm">🌱 Pemulihan Pasca Sakit</strong>
+                <p class="text-slate-600 leading-relaxed">Mempercepat proses pengembalian kesegaran tubuh setelah mengalami demam atau flu berat.</p>
+              </div>
+            </div>
+
+            <div class="p-6 bg-teal-light/50 rounded-2xl border border-teal-light space-y-3">
+              <h3 class="font-bold text-sm text-teal-deep">Keamanan Prosedur Medis:</h3>
+              <ul class="space-y-2 text-xs text-slate-700">
+                <li class="flex items-center space-x-2">
+                  <CheckCircle2 size={16} class="text-teal-soft shrink-0" />
+                  <span>Dilakukan pemeriksaan tensi dan anamnesis alergi sebelum tindakan.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <CheckCircle2 size={16} class="text-teal-soft shrink-0" />
+                  <span>Menggunakan jarum dan set infus steril sekali pakai.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <CheckCircle2 size={16} class="text-teal-soft shrink-0" />
+                  <span>Bisa dilakukan di tempat praktik Ruko Ragali atau via layanan Homecare.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
+              <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
+                Reservasi Infus Booster
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Jadwalkan tindakan infus vitamin Anda untuk hari ini di tempat praktik atau di rumah.
+              </p>
+              <a
+                href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20reservasi%20layanan%20Infus%20Booster%20Vitamin..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+              >
+                <PhoneCall size={16} />
+                <span>Reservasi via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin reservasi Infus Booster Vitamin..." />
+</BaseLayout>

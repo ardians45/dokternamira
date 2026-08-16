@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart } from 'lucide-react';
+---
+
+<BaseLayout
+  title="Namira Syar'i Beauty Care - Facial & Peeling Malang"
+  description="Layanan perawatan estetika wajah & facial syar'i khusus wanita di Malang oleh Dokter Namira. Menjaga privasi dengan bahan aman & terdaftar BPOM."
+>
+  <Header />
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-[#025D73] via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-pink-500/20 border border-pink-400/40 px-3.5 py-1.5 rounded-full text-pink-200 text-xs font-semibold">
+            <Sparkles size={14} class="text-pink-300" />
+            <span>Perawatan Estetika Wajah • Khusus Wanita / Syar'i</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Namira Syar'i Beauty Care Malang
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Perawatan kesehatan dan kecantikan kulit wajah dalam suasana tenang, privat, dan aman. Konsultasi langsung dengan dokter untuk solusi masalah kulit wajah Anda.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Syar%27i%20Beauty%20Care..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Konsultasi Skin Care via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-8 space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Konsep Perawatan Wajah Syar'i</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Kami memahami kebutuhan wanita dan muslimah yang menginginkan tempat perawatan kulit wajah yang tenang dan menjaga privasi. Seluruh tindakan perawatan wajah didampingi oleh evaluasi medis untuk memastikan bahan yang digunakan aman bagi kesehatan jangka panjang.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-slate-800">Menu Perawatan Utama:</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
+                <div class="p-4 bg-pink-50/50 rounded-xl border border-pink-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-pink-500 shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Facial Medis & Cleansing</strong>
+                    <span>Pembersihan komedo, ekstraksi higienis, dan pencerahan kulit berkala.</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-pink-50/50 rounded-xl border border-pink-100 flex items-start space-x-3">
+                  <CheckCircle2 size={18} class="text-pink-500 shrink-0 mt-0.5" />
+                  <div>
+                    <strong class="block text-slate-800 mb-0.5">Chemical Peeling Dokter</strong>
+                    <span>Eksfoliasi sel kulit mati untuk masalah jerawat, bekas noda, atau kusam.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-2 text-xs text-slate-600">
+              <strong class="block text-slate-800 text-sm">Privasi & Produk Terjamin BPOM</strong>
+              <p>Seluruh krim dan cairan peeling yang digunakan telah terdaftar BPOM resmi di bawah pengawasan dokter.</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
+              <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
+                Konsultasi Skin Care
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Tanyakan ketersediaan jam treatment facial atau peeling pilihan Anda.
+              </p>
+              <a
+                href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Syar%27i%20Beauty%20Care..."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
+              >
+                <PhoneCall size={16} />
+                <span>Konsultasi WA</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin konsultasi perawatan Syar'i Beauty Care..." />
+</BaseLayout>
