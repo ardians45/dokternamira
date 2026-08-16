@@ -2,84 +2,94 @@
 import { MapPin, Phone, Mail, Clock, ShieldCheck, Heart } from 'lucide-react';
 ---
 
-<footer class="bg-teal-deep text-white pt-16 pb-8 border-t border-teal-hover">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-teal-hover/50">
+<footer class="bg-slate-950 text-slate-300 py-16 lg:py-24 relative overflow-hidden border-t border-slate-900">
+  <!-- Decorative Glows -->
+  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Top CTA Banner inside Footer -->
+    <div class="mb-16 md:mb-24 bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden group hover:border-teal-900/50 transition-colors duration-500">
+      <!-- Decorative element -->
+      <div class="absolute -right-20 -top-20 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 transition-colors duration-700"></div>
       
-      <!-- Col 1: Brand & Legal Info -->
-      <div class="space-y-4">
-        <a href="/" class="inline-block bg-white p-2 rounded-xl hover:scale-105 transition-transform shadow-md">
-          <img
-            src="/logo-dokter-namira.png"
-            alt="Logo Praktek Dokter Namira"
-            class="h-10 sm:h-12 w-auto object-contain"
-          />
-        </a>
-        <a
-          href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20layanan%20kesehatan..."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center justify-center space-x-2 w-full btn-primary"
-        >
-          <Phone size={15} />
-          <span>Hubungi WhatsApp</span>
-        </a>
-        <p class="text-xs text-slate-300 leading-relaxed">
-          Praktek dokter umum terpercaya di Malang. Menyediakan layanan pemeriksaan medis dasar, dokter homevisit ke rumah, terapi bekam medis, infus booster, dan perawatan IMS dengan privasi terjamin.
+      <div class="relative z-10 text-center md:text-left max-w-2xl">
+        <h3 class="text-2xl md:text-3xl font-display font-bold text-white mb-4">Butuh Bantuan Medis Segera?</h3>
+        <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+          Tim Dokter Namira siap melayani konsultasi klinik maupun kunjungan homecare langsung ke rumah Anda. Jangan ragu untuk menghubungi kami kapan saja.
         </p>
-        <div class="flex items-center space-x-2 text-xs text-teal-light font-medium pt-2">
-          <ShieldCheck size={16} class="text-emerald-400 shrink-0" />
-          <span>Praktik Resmi (SIP: 100.3.12/201.0401/35.73.406/2024)</span>
+      </div>
+      <div class="relative z-10 shrink-0">
+        <a href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira..." target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] hover:-translate-y-1">
+          <Phone size={18} />
+          <span>Hubungi via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+      
+      <!-- Brand & About -->
+      <div class="lg:col-span-4 space-y-8">
+        <a href="/" class="inline-block bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+          <!-- Menggunakan invert agar logo terlihat solid putih di background gelap -->
+          <img src="/logo-dokter-namira.png" alt="Logo Praktek Dokter Namira" class="h-10 w-auto brightness-0 invert opacity-90" />
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+          Praktek dokter umum terpercaya di Malang. Menyediakan layanan medis komprehensif, dokter homecare, bekam medis, infus booster, dan perawatan estetika dasar.
+        </p>
+        <div class="flex items-center space-x-3 text-sm text-slate-300 bg-slate-900/50 w-fit px-4 py-2.5 rounded-xl border border-slate-800">
+          <ShieldCheck size={18} class="text-teal-400" />
+          <span class="font-medium tracking-wide">SIP: <span class="font-mono text-teal-400/80">100.3.12/201.0401</span></span>
         </div>
       </div>
 
-      <!-- Col 2: Quick Links -->
-      <div class="space-y-3">
-        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Layanan Medis</h4>
-        <ul class="space-y-2 text-xs text-slate-200">
-          <li><a href="/layanan/homecare-malang" class="hover:text-teal-soft transition-colors">Dokter Homecare Malang</a></li>
-          <li><a href="/layanan/infeksi-menular-seksual" class="hover:text-teal-soft transition-colors">Konsultasi IMS (Privat)</a></li>
-          <li><a href="/layanan/infus-booster-vitamin" class="hover:text-teal-soft transition-colors">Infus Booster & Vitamin</a></li>
-          <li><a href="/layanan/bekam-sunnah-fashdu" class="hover:text-teal-soft transition-colors">Bekam Sunnah & Fashdu</a></li>
-          <li><a href="/layanan/syari-beauty-care" class="hover:text-teal-soft transition-colors">Syar'i Beauty Care</a></li>
+      <!-- Quick Links -->
+      <div class="lg:col-span-2 space-y-6">
+        <h4 class="font-display font-bold text-white tracking-wide">Layanan Utama</h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="/layanan/homecare-malang" class="text-slate-400 hover:text-teal-400 hover:translate-x-1 inline-block transition-all duration-300">Homecare Visit</a></li>
+          <li><a href="/layanan/infeksi-menular-seksual" class="text-slate-400 hover:text-teal-400 hover:translate-x-1 inline-block transition-all duration-300">Konsultasi IMS</a></li>
+          <li><a href="/layanan/infus-booster-vitamin" class="text-slate-400 hover:text-teal-400 hover:translate-x-1 inline-block transition-all duration-300">Infus & Vitamin</a></li>
+          <li><a href="/layanan/bekam-sunnah-fashdu" class="text-slate-400 hover:text-teal-400 hover:translate-x-1 inline-block transition-all duration-300">Bekam & Fashdu</a></li>
+          <li><a href="/layanan/syari-beauty-care" class="text-slate-400 hover:text-teal-400 hover:translate-x-1 inline-block transition-all duration-300">Beauty Care</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Area Layanan Local SEO -->
-      <div class="space-y-3">
-        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Jangkauan Homecare</h4>
-        <p class="text-xs text-slate-200 leading-relaxed">
-          Layanan Kunjungan Dokter Homecare melayani wilayah Malang & sekitarnya:
-        </p>
-        <ul class="grid grid-cols-2 gap-1 text-xs text-slate-300">
-          <li>• Merjosari</li>
-          <li>• Dinoyo</li>
-          <li>• Lowokwaru</li>
-          <li>• Tlogomas</li>
-          <li>• Dau</li>
-          <li>• Blimbing</li>
-          <li>• Sukun</li>
-          <li>• Klojen</li>
-        </ul>
+      <!-- Area Layanan -->
+      <div class="lg:col-span-3 space-y-6">
+        <h4 class="font-display font-bold text-white tracking-wide">Area Homecare</h4>
+        <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-sm text-slate-400">
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Merjosari</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Dinoyo</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Lowokwaru</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Tlogomas</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Dau</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Blimbing</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Sukun</div>
+          <div class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-teal-500/50"></div>Klojen</div>
+        </div>
       </div>
 
-      <!-- Col 4: Contact & Hours -->
-      <div class="space-y-3">
-        <h4 class="font-bold text-sm text-teal-light uppercase tracking-wider">Kontak & Lokasi</h4>
-        <ul class="space-y-2.5 text-xs text-slate-200">
-          <li class="flex items-start space-x-2">
-            <MapPin size={16} class="text-teal-soft shrink-0 mt-0.5" />
-            <span>Ruko Perumahan Ragali Residence, Jl. Tirto Joyo No. 119-69, Merjosari, Lowokwaru, Malang 65144</span>
+      <!-- Contact -->
+      <div class="lg:col-span-3 space-y-6">
+        <h4 class="font-display font-bold text-white tracking-wide">Kontak & Jadwal</h4>
+        <ul class="space-y-5 text-sm text-slate-400">
+          <li class="flex items-start gap-3">
+            <MapPin size={18} class="text-teal-500 shrink-0 mt-0.5" />
+            <span class="leading-relaxed">Ruko Ragali Residence, Jl. Tirto Joyo No.119-69, Merjosari, Malang 65144</span>
           </li>
-          <li class="flex items-center space-x-2">
-            <Phone size={16} class="text-teal-soft shrink-0" />
-            <span>0852-7000-1948 / 0858-1980-0843</span>
+          <li class="flex items-center gap-3">
+            <Phone size={18} class="text-teal-500 shrink-0" />
+            <span>0852-7000-1948</span>
           </li>
-          <li class="flex items-start space-x-2">
-            <Clock size={16} class="text-teal-soft shrink-0 mt-0.5" />
-            <div class="space-y-0.5">
-              <p><strong class="font-semibold">Praktek Umum:</strong> 06.00-09.00 & 16.00-20.00</p>
-              <p><strong class="font-semibold">Kecantikan:</strong> 09.00-16.00</p>
+          <li class="flex items-start gap-3 pt-2">
+            <Clock size={18} class="text-teal-500 shrink-0 mt-0.5" />
+            <div class="space-y-1">
+              <p><span class="text-slate-300 font-medium">Umum:</span> 06.00-09.00 & 16.00-20.00</p>
+              <p><span class="text-slate-300 font-medium">Kecantikan:</span> 09.00-16.00</p>
             </div>
           </li>
         </ul>
@@ -87,14 +97,12 @@ import { MapPin, Phone, Mail, Clock, ShieldCheck, Heart } from 'lucide-react';
 
     </div>
 
-    <!-- Medical Disclaimer & Copyright -->
-    <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-300 space-y-4 md:space-y-0">
-      <div class="max-w-2xl text-center md:text-left text-slate-300 leading-relaxed">
-        <strong class="text-white">Medical Disclaimer:</strong> Informasi di website ini disajikan untuk keperluan edukasi dan panduan layanan. Informasi ini bukan merupakan diagnosis medis independen dan tidak menggantikan pemeriksaan dokter secara langsung.
+    <!-- Bottom Bar -->
+    <div class="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-slate-500 uppercase tracking-wider font-semibold">
+      <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-center md:text-left">
+        <p class="flex items-center justify-center gap-1.5"><ShieldCheck size={14} class="text-slate-400" /> Medical Disclaimer: Info bukan diagnosis independen</p>
       </div>
-      <div class="text-center md:text-right font-medium">
-        &copy; {new Date().getFullYear()} Praktek Dokter Namira Malang. All Rights Reserved.
-      </div>
+      <p>&copy; {new Date().getFullYear()} Praktek Dokter Namira.</p>
     </div>
 
   </div>
