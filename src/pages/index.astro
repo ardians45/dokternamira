@@ -90,73 +90,127 @@ import {
     </section>
 
     <!-- H2: Layanan Kesehatan yang Kami Sediakan -->
-    <section class="py-16 md:py-24 bg-white border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+    <section class="py-16 md:py-24 bg-white border-b border-slate-200 overflow-hidden relative">
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 transform origin-top translate-x-20 -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 scroll-animate">
+          <span class="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-xs font-black text-teal-deep uppercase tracking-widest mb-5 shadow-sm">
+            Layanan Kami
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-tight mb-5">
+            Layanan Medis <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-deep to-emerald-500">Umum</span>
+          </h2>
+          <p class="text-sm md:text-base text-slate-600 font-sans leading-relaxed">
+            Cakupan pemeriksaan umum, laboratorium sederhana, dan tindakan medis sesuai keluhan pasien secara personal dan menyeluruh.
+          </p>
+        </div>
+
+        <!-- 3-Column Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          <!-- Left: Section Title (Sticky) -->
-          <div class="lg:col-span-4 lg:sticky lg:top-24 self-start space-y-6 scroll-animate">
-            <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Layanan Kami</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
-              Layanan Medis <br class="hidden lg:inline"/>Umum
-            </h2>
-            <p class="text-sm text-slate-600 font-sans leading-relaxed">
-              Cakupan pemeriksaan umum, laboratorium sederhana, dan tindakan medis sesuai keluhan pasien secara personal dan menyeluruh.
-            </p>
+          <!-- Card 1: Konsultasi & Pemeriksaan -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 relative overflow-hidden group scroll-animate">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-teal-50 text-teal-deep rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-teal-100 group-hover:text-teal-700 transition-all duration-300">
+                <Stethoscope size={28} />
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-slate-900 mb-6">Konsultasi & Pemeriksaan</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-teal-deep/40 group-hover/item:text-teal-deep shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Konsultasi umum & Pemeriksaan fisik</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-teal-deep/40 group-hover/item:text-teal-deep shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Peresepan dan penggunaan obat medis</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-teal-deep/40 group-hover/item:text-teal-deep shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Kontrol tekanan darah & diabetes</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-teal-deep/40 group-hover/item:text-teal-deep shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Konsultasi ibu & anak, cek kehamilan dasar</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-teal-deep/40 group-hover/item:text-teal-deep shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Surat keterangan sakit, sehat, & berobat</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Right: Services Index -->
-          <div class="lg:col-span-8 space-y-8 pt-8 lg:pt-0 scroll-animate" style="transition-delay: 200ms;">
-            <div class="divide-y divide-slate-100 border-t border-b border-slate-100">
-              
-              <!-- Service Category 1 -->
-              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <div class="md:col-span-1">
-                  <h3 class="font-display font-extrabold text-lg text-slate-900">Konsultasi & Pemeriksaan</h3>
-                </div>
-                <div class="md:col-span-2">
-                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
-                    <li>• Konsultasi umum & Pemeriksaan fisik</li>
-                    <li>• Peresepan dan penggunaan obat medis</li>
-                    <li>• Kontrol tekanan darah & diabetes</li>
-                    <li>• Konsultasi ibu & anak, cek kehamilan dasar</li>
-                    <li>• Surat keterangan sakit, sehat, & berobat</li>
-                  </ul>
-                </div>
+          <!-- Card 2: Tindakan Medis & Lab -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 relative overflow-hidden group scroll-animate" style="transition-delay: 100ms;">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-blue-100 group-hover:text-blue-700 transition-all duration-300">
+                <Microscope size={28} />
               </div>
+              <h3 class="font-display font-extrabold text-xl text-slate-900 mb-6">Tindakan Medis & Lab</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-blue-500/40 group-hover/item:text-blue-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Tes gula darah, kolesterol, asam urat (Stik)</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-blue-500/40 group-hover/item:text-blue-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Cek tensi (tekanan darah) akurat</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-blue-500/40 group-hover/item:text-blue-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Terapi Nebulizer (uap pernapasan)</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-blue-500/40 group-hover/item:text-blue-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Perawatan luka & Ganti balut steril</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-blue-500/40 group-hover/item:text-blue-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Pemasangan Kateter & NGT</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-              <!-- Service Category 2 -->
-              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <div class="md:col-span-1">
-                  <h3 class="font-display font-extrabold text-lg text-slate-900">Tindakan Medis & Lab</h3>
-                </div>
-                <div class="md:col-span-2">
-                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
-                    <li>• Tes gula darah, kolesterol, asam urat (Stik)</li>
-                    <li>• Cek tensi (tekanan darah) akurat</li>
-                    <li>• Terapi Nebulizer (uap pernapasan)</li>
-                    <li>• Perawatan luka & Ganti balut steril</li>
-                    <li>• Pemasangan Kateter & NGT</li>
-                  </ul>
-                </div>
+          <!-- Card 3: Layanan Khusus -->
+          <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200 shadow-sm hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 relative overflow-hidden group scroll-animate" style="transition-delay: 200ms;">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-pink-50 text-pink-500 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-pink-100 group-hover:text-pink-600 transition-all duration-300">
+                <Sparkles size={28} />
               </div>
-
-              <!-- Service Category 3 -->
-              <div class="py-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                <div class="md:col-span-1">
-                  <h3 class="font-display font-extrabold text-lg text-slate-900">Layanan Khusus</h3>
-                </div>
-                <div class="md:col-span-2">
-                  <ul class="space-y-3 text-sm text-slate-600 leading-relaxed font-sans">
-                    <li>• Kunjungan Dokter ke Rumah (Homecare)</li>
-                    <li>• Bekam Sunnah & Terapi Fashdu</li>
-                    <li>• Infus Booster & Suntik Vitamin</li>
-                    <li>• Konsultasi Infeksi Menular Seksual (IMS)</li>
-                    <li>• Perawatan Wajah (Syar'i Beauty Care)</li>
-                  </ul>
-                </div>
-              </div>
-
+              <h3 class="font-display font-extrabold text-xl text-slate-900 mb-6">Layanan Khusus</h3>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-pink-500/40 group-hover/item:text-pink-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Kunjungan Dokter ke Rumah (Homecare)</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-pink-500/40 group-hover/item:text-pink-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Bekam Sunnah & Terapi Fashdu</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-pink-500/40 group-hover/item:text-pink-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Infus Booster & Suntik Vitamin</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-pink-500/40 group-hover/item:text-pink-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Konsultasi Infeksi Menular Seksual (IMS)</span>
+                </li>
+                <li class="flex items-start gap-3 group/item">
+                  <CheckCircle2 size={18} class="text-pink-500/40 group-hover/item:text-pink-500 shrink-0 mt-0.5 transition-colors" />
+                  <span class="text-sm text-slate-600 leading-relaxed">Perawatan Wajah (Syar'i Beauty Care)</span>
+                </li>
+              </ul>
             </div>
           </div>
 
