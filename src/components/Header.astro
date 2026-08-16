@@ -76,11 +76,11 @@ import { Phone, MapPin, Clock, Stethoscope, ChevronRight, Menu, X, Home, ShieldA
       <!-- Mobile Hamburger Button -->
       <button
         id="mobile-menu-btn"
-        class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none"
+        class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors focus:outline-none relative w-10 h-10 flex items-center justify-center"
         aria-label="Toggle menu"
       >
-        <Menu size={24} id="menu-icon-open" />
-        <X size={24} id="menu-icon-close" class="hidden" />
+        <span id="menu-icon-open" class="absolute inset-0 flex items-center justify-center"><Menu size={24} /></span>
+        <span id="menu-icon-close" class="absolute inset-0 hidden items-center justify-center"><X size={24} /></span>
       </button>
     </div>
   </div>
@@ -151,11 +151,15 @@ import { Phone, MapPin, Clock, Stethoscope, ChevronRight, Menu, X, Home, ShieldA
       if (isHidden) {
         mobileNav.classList.remove('hidden');
         iconOpen.classList.add('hidden');
+        iconOpen.classList.remove('flex');
         iconClose.classList.remove('hidden');
+        iconClose.classList.add('flex');
       } else {
         mobileNav.classList.add('hidden');
         iconOpen.classList.remove('hidden');
+        iconOpen.classList.add('flex');
         iconClose.classList.add('hidden');
+        iconClose.classList.remove('flex');
       }
     });
   }
