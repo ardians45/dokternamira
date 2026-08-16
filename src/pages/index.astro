@@ -50,9 +50,11 @@ import {
           <!-- Left Column: Typography & Content -->
           <div class="lg:col-span-6 space-y-8">
             <div class="space-y-4">
-              <p class="text-teal-deep font-bold text-sm tracking-widest uppercase">
-                Dr. Namira Farhayati Lubis
-              </p>
+              <div class="text-teal-deep font-bold text-sm tracking-widest uppercase flex flex-col sm:flex-row sm:items-center sm:space-x-2">
+                <span>Dr. Namira Farhayati Lubis</span>
+                <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-teal-soft"></span>
+                <span class="text-teal-deep/70 text-xs mt-1 sm:mt-0 tracking-wide">SIP: 100.3.12/201.0401/35.73.406/2024</span>
+              </div>
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-slate-900 tracking-tight leading-[1.1]">
                 Praktik Dokter Umum & <span class="text-teal-deep">Homecare</span> di Malang
               </h1>
@@ -110,8 +112,8 @@ import {
               <BadgeCheck size={20} />
               <h4 class="font-display font-extrabold text-sm uppercase tracking-wider">SIP Aktif</h4>
             </div>
-            <p class="text-xs text-slate-600 leading-relaxed font-sans">
-              Praktik oleh dokter yang terdaftar resmi dan memiliki Surat Izin Praktik (SIP).
+            <p class="text-sm text-slate-500 leading-relaxed font-sans mt-1">
+              Praktik oleh dokter yang terdaftar resmi (SIP: 100.3.12/201.0401/35.73.406/2024).
             </p>
           </div>
 
@@ -374,7 +376,7 @@ import {
             <ul class="space-y-4 pt-4 border-t border-slate-100">
               <li class="flex items-start space-x-3 text-sm text-slate-700">
                 <Check size={20} class="text-teal-deep shrink-0 mt-0.5" />
-                <span><strong class="text-slate-900">Legalitas Terjamin:</strong> Memiliki Surat Izin Praktik (SIP) resmi untuk semua layanan.</span>
+                <span><strong class="text-slate-900">Legalitas Terjamin:</strong> Memiliki Surat Izin Praktik (SIP: 100.3.12/201.0401/35.73.406/2024) resmi untuk semua layanan.</span>
               </li>
               <li class="flex items-start space-x-3 text-sm text-slate-700">
                 <Check size={20} class="text-teal-deep shrink-0 mt-0.5" />
