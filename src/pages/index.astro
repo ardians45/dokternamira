@@ -43,8 +43,13 @@ import {
 
   <main class="flex-grow">
     <!-- Hero Section -->
-    <section class="bg-white pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative overflow-hidden bg-white pt-12 pb-16 md:pt-20 md:pb-24 border-b border-slate-100">
+      <!-- Animated Ambient Blobs -->
+      <div class="absolute top-1/4 -left-20 w-80 h-80 md:w-96 md:h-96 bg-teal-soft/20 rounded-full blur-3xl mix-blend-multiply pointer-events-none animate-blob-float"></div>
+      <div class="absolute bottom-10 right-10 w-96 h-96 md:w-[450px] md:h-[450px] bg-teal-light rounded-full blur-3xl opacity-70 pointer-events-none animate-blob-float" style="animation-delay: 2s;"></div>
+      <div class="absolute top-10 right-1/3 w-64 h-64 bg-accent-pink/15 rounded-full blur-3xl pointer-events-none animate-blob-float" style="animation-delay: 4s;"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <!-- Left Column: Typography & Content -->
@@ -69,7 +74,7 @@ import {
                 href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira..."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center space-x-2 bg-teal-deep hover:bg-teal-hover text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors"
+                class="btn-primary w-full sm:w-auto"
               >
                 <PhoneCall size={18} />
                 <span>Konsultasi via WhatsApp</span>
@@ -84,15 +89,17 @@ import {
             </div>
           </div>
 
-          <!-- Right Column: Editorial Photography -->
+          <!-- Right Column: Editorial Photography with Organic Blob Background -->
           <div class="lg:col-span-6 scroll-animate" style="transition-delay: 200ms;">
             <div class="relative">
-              <!-- Simple structural offset box -->
-              <div class="absolute inset-0 translate-x-4 translate-y-4 bg-teal-light/50 hidden md:block"></div>
+              <!-- Organic Decorative SVG Blob Behind Image -->
+              <div class="absolute -inset-4 md:-inset-6 bg-gradient-to-tr from-teal-soft/30 via-teal-light to-teal-deep/10 rounded-[40%_60%_70%_30%/50%_60%_40%_50%] animate-blob-morph -z-10 filter blur-sm"></div>
+              <div class="absolute inset-0 translate-x-3 translate-y-3 bg-teal-deep/10 hidden md:block -z-10 rounded-2xl"></div>
+              
               <img
                 src="/dokter-namira-portrait.jpg"
                 alt="Dr. Namira Farhayati Lubis"
-                class="relative z-10 w-full h-[500px] md:h-[600px] object-cover object-top"
+                class="relative z-10 w-full h-[500px] md:h-[600px] object-cover object-top rounded-2xl shadow-lg border border-slate-100"
                 loading="eager"
               />
             </div>
@@ -557,7 +564,7 @@ import {
             href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20kesehatan..."
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center space-x-2 bg-teal-deep hover:bg-teal-hover text-white font-extrabold px-10 py-5 text-sm uppercase tracking-wider transition-colors w-full sm:w-auto"
+            class="btn-primary w-full sm:w-auto"
           >
             <PhoneCall size={18} />
             <span>Konsultasi via WhatsApp</span>
@@ -571,5 +578,42 @@ import {
   <Footer />
   <WhatsAppFloat client:idle />
 </BaseLayout>
+
+<style>
+  @keyframes blobFloat {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -40px) scale(1.08);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.95);
+    }
+  }
+
+  @keyframes blobMorph {
+    0%, 100% {
+      border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%;
+      transform: scale(1) rotate(0deg);
+    }
+    34% {
+      border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+      transform: scale(1.04) rotate(6deg);
+    }
+    67% {
+      border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%;
+      transform: scale(0.97) rotate(-4deg);
+    }
+  }
+
+  .animate-blob-float {
+    animation: blobFloat 12s infinite ease-in-out;
+  }
+
+  .animate-blob-morph {
+    animation: blobMorph 10s infinite ease-in-out;
+  }
+</style>
 
 

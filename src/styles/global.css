@@ -5,7 +5,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-family: 'Inter', 'sans-serif';
+    color: #1a202c; /* slate-900 */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', 'sans-serif';
   }
 }
 
@@ -19,5 +23,13 @@
   .animate-fade-in-up {
     opacity: 1 !important;
     transform: translateY(0) !important;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center space-x-2 bg-teal-deep text-white font-bold py-3 px-5 rounded-full shadow-sm transition-colors duration-200 hover:bg-teal-hover hover:shadow-lg hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center space-x-2 border border-teal-deep text-teal-deep font-medium py-2 px-4 rounded-full transition-colors duration-200 hover:bg-teal-soft/20 hover:scale-105;
   }
 }
