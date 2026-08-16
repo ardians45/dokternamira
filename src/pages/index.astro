@@ -48,7 +48,7 @@ import {
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           <!-- Left Column: Typography & Content -->
-          <div class="lg:col-span-6 space-y-8">
+          <div class="lg:col-span-6 space-y-8 scroll-animate">
             <div class="space-y-4">
               <div class="text-teal-deep font-bold text-sm tracking-widest uppercase flex flex-col sm:flex-row sm:items-center sm:space-x-2">
                 <span>Dr. Namira Farhayati Lubis</span>
@@ -85,7 +85,7 @@ import {
           </div>
 
           <!-- Right Column: Editorial Photography -->
-          <div class="lg:col-span-6">
+          <div class="lg:col-span-6 scroll-animate" style="transition-delay: 200ms;">
             <div class="relative">
               <!-- Simple structural offset box -->
               <div class="absolute inset-0 translate-x-4 translate-y-4 bg-teal-light/50 hidden md:block"></div>
@@ -105,7 +105,7 @@ import {
     <!-- TRUST SECTION (Typographic Grid) -->
     <section class="border-b border-slate-200 bg-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 scroll-animate">
           
           <div class="py-8 md:px-6 lg:px-8 space-y-2">
             <div class="flex items-center space-x-2 text-teal-deep">
@@ -156,9 +156,9 @@ import {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
-          <!-- Sticky Section Title (4 cols) -->
-          <div class="lg:col-span-4 lg:sticky lg:top-32 self-start space-y-4">
-            <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Pemeriksaan Dasar</span>
+          <!-- Left: Section Title (Sticky) -->
+          <div class="lg:col-span-4 lg:sticky lg:top-24 self-start space-y-6 scroll-animate">
+            <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Layanan Kami</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
               Layanan Medis <br class="hidden lg:inline"/>Umum
             </h2>
@@ -167,8 +167,8 @@ import {
             </p>
           </div>
 
-          <!-- Services List (8 cols) -->
-          <div class="lg:col-span-8">
+          <!-- Right: Services Index -->
+          <div class="lg:col-span-8 space-y-8 pt-8 lg:pt-0 scroll-animate" style="transition-delay: 200ms;">
             <div class="divide-y divide-slate-100 border-t border-b border-slate-100">
               
               <!-- Service Category 1 -->
@@ -230,7 +230,7 @@ import {
     <section id="layanan-utama" class="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="max-w-3xl mb-16 space-y-4">
+        <div class="max-w-3xl mb-16 space-y-4 scroll-animate">
           <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Pilar Layanan</span>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
             Layanan Medis <span class="text-teal-deep">Utama</span>
@@ -243,7 +243,7 @@ import {
         <div class="space-y-12 lg:space-y-24">
           
           <!-- Homecare (Text Left, Img Right) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center scroll-animate">
             <div class="lg:col-span-5 space-y-6 lg:order-1">
               <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center">
                 <Home size={24} />
@@ -270,7 +270,7 @@ import {
           </div>
 
           <!-- IMS (Img Left, Text Right) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center scroll-animate">
             <div class="lg:col-span-7 bg-slate-200 aspect-[4/3] rounded-sm relative overflow-hidden flex items-center justify-center">
                 <span class="text-slate-400 font-bold tracking-widest text-sm uppercase text-center px-4">Placeholder Foto: Konsultasi Pasien</span>
                 <div class="absolute inset-0 bg-teal-900/5 mix-blend-multiply"></div>
@@ -293,7 +293,7 @@ import {
           </div>
           
           <!-- Infus & Bekam (Grid) -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 scroll-animate">
             
             <div class="border-t border-slate-200 pt-8 space-y-5">
               <div class="flex items-center space-x-4">
@@ -330,7 +330,7 @@ import {
           </div>
 
           <!-- Syari Care (Full Width Typographic Callout) -->
-          <div class="bg-pink-50 border border-pink-100 p-8 lg:p-12">
+          <div class="bg-pink-50 border border-pink-100 p-8 lg:p-12 scroll-animate">
              <div class="max-w-3xl space-y-5">
                 <span class="text-xs font-black text-pink-600 uppercase tracking-widest border-l-2 border-pink-600 pl-3">Khusus Muslimah/Wanita</span>
                 <h3 class="font-display font-extrabold text-2xl lg:text-3xl text-slate-900">Syar'i Beauty Care</h3>
@@ -354,7 +354,7 @@ import {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          <div class="lg:col-span-5">
+          <div class="lg:col-span-5 scroll-animate">
             <div class="relative w-full aspect-[3/4] bg-teal-50">
               <img
                 src="/dokter-namira-portrait.jpg"
@@ -364,7 +364,7 @@ import {
             </div>
           </div>
 
-          <div class="lg:col-span-7 space-y-6 lg:py-12">
+          <div class="lg:col-span-7 space-y-6 lg:py-12 scroll-animate" style="transition-delay: 200ms;">
             <span class="text-xs font-black text-teal-deep uppercase tracking-widest border-l-2 border-teal-deep pl-3">Komitmen Kami</span>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 leading-tight">
               Mengutamakan Kenyamanan Pasien

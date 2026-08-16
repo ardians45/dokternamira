@@ -92,5 +92,23 @@ const activeSchema = schemaData || defaultSchema;
 </head>
 <body class="bg-white text-slate-main antialiased selection:bg-teal-soft selection:text-white flex flex-col min-h-screen">
   <slot />
+
+  <!-- Intersection Observer for Scroll Animations -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.scroll-animate').forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
