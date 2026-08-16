@@ -1,0 +1,23 @@
+---
+interface Props {
+  badge: string;
+  title: string;
+  highlight?: string;
+  description: string;
+  alignment?: 'left' | 'center';
+}
+
+const { badge, title, highlight, description, alignment = 'left' } = Astro.props;
+const alignClass = alignment === 'center' ? 'text-center mx-auto' : 'text-left';
+---
+<div class={`max-w-3xl space-y-4 ${alignClass}`}>
+  <span class={`text-xs font-black text-teal-deep uppercase tracking-widest border-teal-deep ${alignment === 'left' ? 'border-l-2 pl-3' : ''}`}>
+    {badge}
+  </span>
+  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
+    {title} {highlight && <span class="text-teal-deep">{highlight}</span>}
+  </h2>
+  <p class="text-slate-600 text-sm md:text-base font-sans leading-relaxed">
+    {description}
+  </p>
+</div>

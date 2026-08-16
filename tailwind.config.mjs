@@ -24,6 +24,10 @@ export default {
         display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
         serif: ['Plus Jakarta Sans', 'serif'],
       },
+      boxShadow: {
+        'premium': '0 10px 40px -10px rgba(2, 93, 115, 0.1)',
+        'glass': '0 8px 32px 0 rgba(2, 93, 115, 0.05)',
+      }
     },
   },
   plugins: [],
