@@ -12,85 +12,105 @@ import { Stethoscope, Home, ShieldCheck, Droplet, HeartPulse, Sparkles, ChevronR
 >
   <Header />
 
-  <main class="flex-grow">
-    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl space-y-4">
-          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
-            <Stethoscope size={14} class="text-emerald-400" />
-            <span>Indeks Layanan Kesehatan Medis</span>
-          </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            Layanan Medis Praktek Dokter Namira
-          </h1>
-          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
-            Temukan solusi penanganan medis komprehensif yang dirancang sesuai kebutuhan Anda di Malang.
-          </p>
+  <main class="flex-grow bg-slate-50">
+    <!-- Premium Hero Section -->
+    <section class="relative bg-slate-950 text-white pt-20 pb-24 overflow-hidden border-b border-teal-900/50">
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-800/40 via-transparent to-transparent"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-600/20 rounded-full blur-[100px]"></div>
+      </div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-animate">
+        <div class="inline-flex items-center space-x-2 bg-white/10 border border-white/20 backdrop-blur-md px-4 py-2 rounded-full text-teal-300 text-xs font-bold uppercase tracking-widest mb-6 shadow-glass">
+          <Stethoscope size={14} />
+          <span>Indeks Layanan Medis</span>
         </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight leading-[1.15] mb-6">
+          Layanan Medis <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300">Dokter Namira</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-sans">
+          Temukan solusi penanganan medis komprehensif yang dirancang secara personal dan profesional sesuai kebutuhan Anda di Malang.
+        </p>
       </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <!-- Main Content Section -->
+    <section class="py-16 md:py-24 relative -mt-8 z-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           
-          <a href="/layanan/homecare-malang" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
-            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
-              <Home size={20} />
+          <a href="/layanan/homecare-malang" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-teal-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-teal-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <Home size={28} />
             </div>
-            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Dokter Homecare & Homevisit</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Kunjungan dokter dan perawatan medis langsung di rumah Anda area Malang.</p>
-            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
-              <span>Pelajari Selengkapnya</span>
-              <ChevronRight size={14} />
-            </div>
-          </a>
-
-          <a href="/layanan/infeksi-menular-seksual" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
-            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
-              <ShieldCheck size={20} />
-            </div>
-            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Konsultasi & Pengobatan IMS</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Penanganan medis gejala IMS secara privat, rahasia, dan tanpa stigma.</p>
-            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
-              <span>Pelajari Selengkapnya</span>
-              <ChevronRight size={14} />
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-teal-deep transition-colors mb-3">Dokter Homecare</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Kunjungan dokter dan perawatan medis langsung di rumah Anda dengan peralatan standar medis.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-teal-600 group-hover:text-teal-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
             </div>
           </a>
 
-          <a href="/layanan/infus-booster-vitamin" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
-            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
-              <Droplet size={20} />
+          <a href="/layanan/infeksi-menular-seksual" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-amber-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate" style="transition-delay: 50ms;">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-amber-50 to-amber-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <ShieldCheck size={28} />
             </div>
-            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Infus Booster & Vitamin</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Terapi cairan multivitamin untuk kebugaran dan pemulihan stamina.</p>
-            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
-              <span>Pelajari Selengkapnya</span>
-              <ChevronRight size={14} />
-            </div>
-          </a>
-
-          <a href="/layanan/bekam-sunnah-fashdu" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group">
-            <div class="w-10 h-10 rounded-xl bg-teal-deep text-white flex items-center justify-center">
-              <HeartPulse size={20} />
-            </div>
-            <h3 class="font-bold text-lg text-slate-800 group-hover:text-teal-deep transition-colors">Bekam Sunnah & Fashdu</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Terapi bekam medis higienis dengan jarum dan cup sekali pakai.</p>
-            <div class="text-xs font-bold text-teal-deep flex items-center space-x-1 pt-2">
-              <span>Pelajari Selengkapnya</span>
-              <ChevronRight size={14} />
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-amber-700 transition-colors mb-3">Konsultasi IMS</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Penanganan medis gejala penyakit menular seksual secara 100% privat, rahasia, dan tanpa stigma.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-amber-600 group-hover:text-amber-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
             </div>
           </a>
 
-          <a href="/layanan/syari-beauty-care" class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-teal-soft hover:shadow-lg transition-all space-y-3 group md:col-span-2 lg:col-span-2">
-            <div class="w-10 h-10 rounded-xl bg-pink-600 text-white flex items-center justify-center">
-              <Sparkles size={20} />
+          <a href="/layanan/infus-booster-vitamin" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-blue-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate" style="transition-delay: 100ms;">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <Droplet size={28} />
             </div>
-            <h3 class="font-bold text-lg text-slate-800 group-hover:text-pink-600 transition-colors">Syar'i Beauty Care</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">Perawatan kesehatan kulit wajah (facial/peeling) khusus wanita yang aman & privat.</p>
-            <div class="text-xs font-bold text-pink-600 flex items-center space-x-1 pt-2">
-              <span>Pelajari Selengkapnya</span>
-              <ChevronRight size={14} />
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-blue-700 transition-colors mb-3">Infus Booster & Vitamin</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Terapi cairan infus multivitamin untuk kebugaran, pemulihan stamina pasca sakit, dan pencerah kulit.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-blue-600 group-hover:text-blue-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
+            </div>
+          </a>
+
+          <a href="/layanan/bekam-sunnah-fashdu" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-red-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-red-50 to-red-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <HeartPulse size={28} />
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-red-700 transition-colors mb-3">Bekam & Fashdu Medis</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Terapi bekam medis higienis dipadukan dengan teknik fashdu untuk mengeluarkan toksin darah.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-red-600 group-hover:text-red-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-red-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
+            </div>
+          </a>
+
+          <a href="/layanan/syari-beauty-care" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-pink-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col md:col-span-2 lg:col-span-2 scroll-animate" style="transition-delay: 50ms;">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-pink-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <Sparkles size={28} />
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-pink-600 transition-colors mb-3">Syar'i Beauty Care</h3>
+            <p class="text-sm text-slate-600 leading-relaxed max-w-xl flex-grow">Pusat perawatan kesehatan dan estetika kulit wajah khusus muslimah (Facial & Peeling) yang mengedepankan keamanan medis dan privasi tertutup.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-pink-600 group-hover:text-pink-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center group-hover:bg-pink-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
             </div>
           </a>
 
