@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/React/WhatsAppFloat.jsx';
-import { Stethoscope, Home, ShieldCheck, Droplet, HeartPulse, Sparkles, ChevronRight } from 'lucide-react';
+import { Stethoscope, Home, ShieldCheck, Droplet, HeartPulse, Sparkles, ChevronRight, Scissors, ShoppingBag } from 'lucide-react';
 ---
 
 <BaseLayout
@@ -99,16 +99,48 @@ import { Stethoscope, Home, ShieldCheck, Droplet, HeartPulse, Sparkles, ChevronR
             </div>
           </a>
 
-          <a href="/layanan/syari-beauty-care" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-pink-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col md:col-span-2 lg:col-span-2 scroll-animate" style="transition-delay: 50ms;">
+          <a href="/layanan/khitan-sunat" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-amber-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate">
+            <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-amber-50 to-amber-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+              <Scissors size={28} />
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-amber-700 transition-colors mb-3">Sunat / Khitan Modern</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Layanan sunat anak & dewasa steril medis, minim rasa sakit, dengan opsi tindakan di klinik atau Homecare visit.</p>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-amber-600 group-hover:text-amber-700 transition-colors">
+              <span>Pelajari Detail</span>
+              <div class="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
+            </div>
+          </a>
+
+          <a href="/layanan/syari-beauty-care" class="group relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200 hover:border-pink-300 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col scroll-animate" style="transition-delay: 50ms;">
             <div class="absolute right-0 top-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-pink-100/50 rounded-bl-full -z-10 transition-transform duration-500 group-hover:scale-125"></div>
             <div class="w-14 h-14 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300 shadow-sm">
               <Sparkles size={28} />
             </div>
-            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-pink-600 transition-colors mb-3">Syar'i Beauty Care</h3>
-            <p class="text-sm text-slate-600 leading-relaxed max-w-xl flex-grow">Pusat perawatan kesehatan dan estetika kulit wajah khusus muslimah (Facial & Peeling) yang mengedepankan keamanan medis dan privasi tertutup.</p>
+            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-pink-600 transition-colors mb-3">Syar'i Beauty & Aesthetic Care</h3>
+            <p class="text-sm text-slate-600 leading-relaxed flex-grow">Pusat perawatan kesehatan dan estetika kulit wajah khusus wanita (Facial, Peeling & Serum Namglow) dengan privasi tertutup.</p>
             <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-pink-600 group-hover:text-pink-700 transition-colors">
               <span>Pelajari Detail</span>
               <div class="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center group-hover:bg-pink-100 transition-colors">
+                <ChevronRight size={16} />
+              </div>
+            </div>
+          </a>
+
+          <a href="/produk" class="group relative bg-gradient-to-br from-amber-50 via-white to-amber-100/40 p-6 md:p-8 rounded-3xl border border-amber-200 hover:border-amber-400 hover:shadow-premium transition-all duration-300 overflow-hidden flex flex-col md:col-span-2 lg:col-span-3 scroll-animate" style="transition-delay: 100ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-md">
+                <ShoppingBag size={28} />
+              </div>
+              <span class="bg-amber-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase">Katalog Produk Resmi</span>
+            </div>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 group-hover:text-amber-700 transition-colors mb-2">Produk Sehat & Skincare Dokter Namira</h3>
+            <p class="text-sm text-slate-600 leading-relaxed max-w-2xl flex-grow">Raw Honey Akasia Sumatra murni 100%, Promo Madu Multiflora Grosir, Serum Brightening BPOM, hingga Cream Racikan Gatal resep dokter.</p>
+            <div class="mt-6 pt-4 border-t border-amber-200/60 flex items-center justify-between text-sm font-bold text-amber-700">
+              <span>Lihat Katalog Produk Lengkap</span>
+              <div class="w-8 h-8 rounded-full bg-amber-200/80 flex items-center justify-center">
                 <ChevronRight size={16} />
               </div>
             </div>

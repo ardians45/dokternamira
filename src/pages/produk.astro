@@ -1,0 +1,385 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/React/WhatsAppFloat';
+import { ShoppingBag, CheckCircle, ShieldCheck, Truck, Sparkles, MessageCircle, Heart, Star, Info, Package, PhoneCall } from 'lucide-react';
+
+const title = "Katalog Produk Sehat & Skincare - Praktek Dokter Namira Malang";
+const description = "Jual Raw Honey Akasia Sumatra murni, Promo Madu Multiflora Grosir, Serum Brightening Namglow BPOM, dan Cream Racikan Gatal dari Dokter Namira Malang.";
+
+const rawHoneyWaMsg = encodeURIComponent("Bismillah, Halo Dokter Namira, saya ingin memesan Raw Honey Akasia Sumatra.");
+const multifloraWaMsg = encodeURIComponent("Bismillah, Halo Dokter Namira, saya ingin memesan Promo Madu Multiflora Grosir.");
+const serumWaMsg = encodeURIComponent("Bismillah, Halo Dokter Namira, saya ingin memesan Serum Brightening by Namglow.");
+const creamWaMsg = encodeURIComponent("Bismillah, Halo Dokter Namira, saya ingin konsultasi & memesan Cream Racikan Gatal.");
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+
+  <main class="bg-slate-50 min-h-screen pb-20">
+    <!-- Hero Banner -->
+    <section class="relative bg-gradient-to-br from-teal-deep via-teal-900 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/20 via-transparent to-transparent pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl text-center md:text-left">
+          <div class="inline-flex items-center space-x-2 bg-teal-800/60 border border-teal-500/30 backdrop-blur-md px-4 py-1.5 rounded-full text-teal-200 text-xs sm:text-sm font-semibold mb-6">
+            <Sparkles size={16} class="text-amber-400" />
+            <span>#semuabisaminummadu & Perawatan Sehat Alami</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight mb-4">
+            Katalog Produk Kesehatan & Skincare Dokter Namira
+          </h1>
+          <p class="text-base sm:text-lg text-teal-100/90 font-light leading-relaxed mb-8">
+            Produk madu murni 100%, skincare teruji BPOM, hingga cream racikan medis khusus yang siap dikirim langsung dari Praktek Dokter Namira Merjosari, Malang.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-teal-200">
+            <div class="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-xl border border-white/10 backdrop-blur-sm">
+              <ShieldCheck size={16} class="text-teal-300" />
+              <span>100% Original & Teruji Medis</span>
+            </div>
+            <div class="flex items-center gap-1.5 bg-white/10 px-3.5 py-2 rounded-xl border border-white/10 backdrop-blur-sm">
+              <Truck size={16} class="text-teal-300" />
+              <span>Subsidi Ongkir JNT Rp 5.000/kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+      
+      <!-- Category Tabs / Filter Notice -->
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+            <ShoppingBag size={20} />
+          </div>
+          <div>
+            <h2 class="text-lg font-bold text-slate-800">Koleksi Produk Pilihan</h2>
+            <p class="text-xs text-slate-500">Pemesanan resmi langsung melalui WhatsApp Dokter Namira</p>
+          </div>
+        </div>
+        <a href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20tanya%20produk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition-colors shadow-sm">
+          <MessageCircle size={16} />
+          <span>Chat CS / Order WA</span>
+        </a>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Product 1: Raw Honey -->
+        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative bg-amber-50/50 p-6 flex items-center justify-center border-b border-amber-100/60 overflow-hidden min-h-[320px]">
+            <span class="absolute top-4 left-4 bg-amber-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">
+              Best Seller
+            </span>
+            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-3 py-1 rounded-full border border-amber-200 shadow-sm z-10 flex items-center gap-1">
+              <Truck size={13} class="text-teal-600" /> Subsidi JNT Rp5.000/kg
+            </span>
+            <img 
+              src="/produk/Raw Honey by Dokter Namira.png" 
+              alt="Raw Honey by Dokter Namira" 
+              class="max-h-72 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-amber-600 uppercase tracking-wider mb-2">
+                <span>🍯 Madu Akasia Sumatra Murni</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-slate-800 group-hover:text-amber-600 transition-colors">
+                Raw Honey by Dokter Namira
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mt-3">
+                Madu murni 100% tanpa campuran perasan apapun, dipanen langsung dari petani peternak Sumatra. Sangat efektif sebagai tindakan preventif & kuratif berbagai penyakit.
+              </p>
+              
+              <div class="mt-4 bg-amber-50/70 border border-amber-200/60 rounded-xl p-3.5 text-xs text-amber-900 space-y-1">
+                <p class="font-bold flex items-center gap-1.5"><Heart size={14} class="text-amber-600" /> #semuabisaminummadu</p>
+                <p class="text-amber-800">"Yang asli belum tentu murni, tapi yang murni sudah pasti asli."</p>
+              </div>
+
+              <!-- Price Table -->
+              <div class="mt-6 space-y-2">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Varian Kemasan & Harga:</div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex flex-col">
+                    <span class="text-xs text-slate-500 font-medium">1000 gram (1 kg)</span>
+                    <span class="text-base font-extrabold text-slate-900">Rp 100.000</span>
+                  </div>
+                  <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl flex flex-col">
+                    <span class="text-xs text-slate-500 font-medium">500 gram</span>
+                    <span class="text-base font-extrabold text-slate-900">Rp 75.000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+              <span class="text-xs font-medium text-slate-500">Stok Terbatas (Fresh Supply)</span>
+              <a 
+                href={`https://wa.me/6285270001948?text=${rawHoneyWaMsg}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+              >
+                <MessageCircle size={16} />
+                <span>Pesan Raw Honey</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Promo Madu Multiflora -->
+        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative bg-emerald-50/50 p-6 flex items-center justify-center border-b border-emerald-100/60 overflow-hidden min-h-[320px]">
+            <span class="absolute top-4 left-4 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">
+              Hemat Grosir / Reseller
+            </span>
+            <img 
+              src="/produk/MADU MULTIFLORA by Dokter Namira.png" 
+              alt="Madu Multiflora Dokter Namira" 
+              class="max-h-72 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">
+                <span>📦 Madu Grosir & Eceran</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-slate-800 group-hover:text-emerald-600 transition-colors">
+                Promo Madu Multiflora by Dokter Namira
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mt-3">
+                Madu kaya nutrisi cocok untuk konsumsi harian keluarga maupun reseller. Fleksibel bisa order custom wadah, dengan/tanpa stiker & box.
+              </p>
+
+              <!-- Tiered Wholesale Prices -->
+              <div class="mt-5 space-y-2">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Harga Ecer & Grosir Bertingkat:</div>
+                <div class="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-4 space-y-2 text-xs text-slate-700">
+                  <div class="flex justify-between items-center pb-1 border-b border-emerald-200/50">
+                    <span class="font-medium text-slate-600">Ecer (1 kg)</span>
+                    <span class="font-extrabold text-slate-900 text-sm">Rp 65.000 / kg</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span>1 - 10 kg</span>
+                    <span class="font-bold text-emerald-700">Rp 50.000 / kg</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span>11 - 50 kg</span>
+                    <span class="font-bold text-emerald-700">Rp 48.000 / kg</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span>51 - 100 kg</span>
+                    <span class="font-bold text-emerald-700 font-mono text-sm">Rp 46.000 / kg</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Options badge -->
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[11px] text-slate-600">
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Option Box / No Box</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Pakai / Tanpa Stiker</span>
+                <span class="bg-slate-100 px-2.5 py-1 rounded-md">Wadah 1kg / Jerigen Besar</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+              <span class="text-xs text-slate-500">Kirim Gosend, JNT, Lion, Ambil Sendiri</span>
+              <a 
+                href={`https://wa.me/6285270001948?text=${multifloraWaMsg}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+              >
+                <MessageCircle size={16} />
+                <span>Pesan Multiflora</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: Serum Brightening by Namglow -->
+        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative bg-pink-50/50 p-6 flex items-center justify-center border-b border-pink-100/60 overflow-hidden min-h-[320px]">
+            <span class="absolute top-4 left-4 bg-pink-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">
+              Aman Bumil & Busui
+            </span>
+            <span class="absolute top-4 right-4 bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 z-10 flex items-center gap-1">
+              <ShieldCheck size={14} /> Terdaftar BPOM
+            </span>
+            <img 
+              src="/produk/Serum Brightening by Namglow.png" 
+              alt="Serum Brightening by Namglow" 
+              class="max-h-72 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-pink-600 uppercase tracking-wider mb-2">
+                <span>✨ Skincare Syar'i & Medis</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-slate-800 group-hover:text-pink-600 transition-colors">
+                Serum Brightening by Namglow
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mt-3">
+                Serum perawatan wajah khusus yang diformulasikan efektif untuk menjaga kesehatan kulit secara alami dan aman.
+              </p>
+
+              <!-- Benefits -->
+              <div class="mt-4 space-y-2">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider">Manfaat Utama:</div>
+                <ul class="space-y-1.5 text-xs text-slate-700">
+                  <li class="flex items-center gap-2">
+                    <CheckCircle size={15} class="text-pink-500 shrink-0" />
+                    <span>Mencerahkan kulit secara merata</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <CheckCircle size={15} class="text-pink-500 shrink-0" />
+                    <span>Melembabkan & menutrisi kulit hingga lapisan dalam</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <CheckCircle size={15} class="text-pink-500 shrink-0" />
+                    <span>Menyamarkan bintik hitam & bekas jerawat</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-5 flex items-baseline gap-3">
+                <span class="text-2xl font-extrabold text-slate-900">Rp 99.000</span>
+                <span class="text-xs font-semibold text-pink-600 bg-pink-50 border border-pink-200 px-2.5 py-1 rounded-md">
+                  Reseller Welcome ❣️
+                </span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+              <span class="text-xs text-slate-500">Praktek Dokter Namira Merjosari</span>
+              <a 
+                href={`https://wa.me/6285270001948?text=${serumWaMsg}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 bg-pink-600 hover:bg-pink-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+              >
+                <MessageCircle size={16} />
+                <span>Pesan Serum Namglow</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Cream Racikan Gatal Medis -->
+        <div class="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+          <div class="relative bg-teal-50/50 p-6 flex items-center justify-center border-b border-teal-100/60 overflow-hidden min-h-[320px]">
+            <span class="absolute top-4 left-4 bg-teal-700 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">
+              Resep Dokter (Khusus)
+            </span>
+            <span class="absolute top-4 right-4 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full border border-amber-200 z-10 flex items-center gap-1">
+              <Info size={14} /> Konsultasi Terlebih Dahulu
+            </span>
+            
+            <div class="grid grid-cols-2 gap-2 max-w-sm">
+              <img 
+                src="/produk/cream gatal.png" 
+                alt="Cream Racikan Gatal Dokter Namira" 
+                class="h-56 w-auto object-contain rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-105"
+              />
+              <img 
+                src="/produk/cream gatal dan testi.png" 
+                alt="Testimoni Cream Gatal Dokter Namira" 
+                class="h-56 w-auto object-contain rounded-xl shadow-sm transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
+            <div>
+              <div class="flex items-center gap-2 text-xs font-bold text-teal-700 uppercase tracking-wider mb-2">
+                <span>🩺 Formulasi Klinis Medis</span>
+              </div>
+              <h3 class="text-2xl font-display font-extrabold text-slate-800 group-hover:text-teal-700 transition-colors">
+                Cream Racikan Gatal & Kulit Menahun
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mt-3">
+                Krim racikan medis khusus untuk mengatasi masalah gatal-gatal hebat, kudis/scabies, hingga luka menahun yang tidak kunjung sembuh atau hilang timbul. Sangat aman dan efektif untuk anak-anak serta para santri/anak pondok.
+              </p>
+
+              <div class="mt-4 bg-teal-50 border border-teal-200/80 rounded-2xl p-4 space-y-2">
+                <div class="text-xs font-bold text-teal-900">Cara Pemakaian:</div>
+                <p class="text-xs text-teal-800 leading-relaxed">
+                  Oleskan secara tipis dan merata pada daerah kulit yang gatal/bermasalah, <strong>3 s.d 4 kali per hari</strong>.
+                </p>
+                <div class="pt-2 text-[11px] text-amber-800 font-semibold flex items-start gap-1.5 border-t border-teal-200/60 mt-2">
+                  <Info size={14} class="shrink-0 text-amber-600 mt-0.5" />
+                  <span>*Catatan: Cream racikan tidak dijual bebas dan disesuaikan resep dokter via konsultasi singkat terlebih dahulu.</span>
+                </div>
+              </div>
+
+              <div class="mt-4 text-2xl font-extrabold text-slate-900">
+                Rp 100.000
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+              <span class="text-xs text-slate-500">Stok dibuat sesuai resep pasien</span>
+              <a 
+                href={`https://wa.me/6285270001948?text=${creamWaMsg}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center space-x-2 bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg text-sm"
+              >
+                <PhoneCall size={16} />
+                <span>Konsultasi & Order</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Shipping & Purchase Info Banner -->
+      <div class="bg-gradient-to-r from-slate-900 via-teal-950 to-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-teal-900/50">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/20 border border-teal-500/40 text-teal-300 flex items-center justify-center font-bold">
+              <Truck size={24} />
+            </div>
+            <h4 class="text-lg font-bold text-white">Pengiriman Langsung</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Pengiriman menggunakan JNT dari Merjosari dengan subsidi ongkir menjadi hanya Rp 5.000 / kg. Juga melayani GoSend & Lion Parcel.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-300 flex items-center justify-center font-bold">
+              <Package size={24} />
+            </div>
+            <h4 class="text-lg font-bold text-white">Bisa Ambil di Lokasi</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Praktek Dokter Namira: Ruko Perumahan Ragali Residence, Jl. Tirto Joyo No. 119-69 Merjosari, Malang.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 flex items-center justify-center font-bold">
+              <ShieldCheck size={24} />
+            </div>
+            <h4 class="text-lg font-bold text-white">Jaminan Keaslian</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Semua produk dijamin murni 100%, teruji aman, dan dikawal langsung oleh konsultasi dokter umum berpengalaman.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <WhatsAppFloat client:load />
+  </main>
+
+  <Footer />
+</BaseLayout>

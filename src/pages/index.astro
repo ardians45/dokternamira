@@ -31,7 +31,11 @@ import {
   Check,
   ArrowRight,
   Shield,
-  Star
+  Star,
+  ShoppingBag,
+  Scissors,
+  Truck,
+  MessageCircle
 } from 'lucide-react';
 ---
 
@@ -362,6 +366,105 @@ import {
              </div>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Featured Products Dokter Namira -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 scroll-animate">
+          <span class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-amber-100 border border-amber-200 text-xs font-black text-amber-800 uppercase tracking-widest mb-4 shadow-sm">
+            <ShoppingBag size={14} class="text-amber-600" />
+            Produk Sehat & Skincare
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight leading-tight mb-4">
+            Produk Pilihan Dokter Namira
+          </h2>
+          <p class="text-sm md:text-base text-slate-600 leading-relaxed">
+            Dari Madu Akasia Sumatra murni 100%, Promo Madu Multiflora Grosir, Serum Brightening BPOM, hingga Cream Racikan khusus gatal-gatal.
+          </p>
+        </div>
+
+        <!-- 4 Grid Products Preview -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Product 1 -->
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="relative bg-amber-50 rounded-2xl p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
+                <span class="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">#semuabisaminummadu</span>
+                <img src="/produk/Raw Honey by Dokter Namira.png" alt="Raw Honey by Dokter Namira" class="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <span class="text-[11px] font-bold text-amber-600 uppercase">Madu Akasia Murni</span>
+              <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-amber-600 transition-colors">Raw Honey Dokter Namira</h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-3">100% murni tanpa campuran. Rp 100rb (1kg) / Rp 75rb (500gr).</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-slate-900">Mulai Rp 75.000</span>
+              <a href="/produk" class="text-xs font-bold text-amber-600 hover:text-amber-700 inline-flex items-center gap-1">Pesan <ArrowRight size={13} /></a>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="relative bg-emerald-50 rounded-2xl p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
+                <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Grosir / Ecer</span>
+                <img src="/produk/MADU MULTIFLORA by Dokter Namira.png" alt="Madu Multiflora Dokter Namira" class="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <span class="text-[11px] font-bold text-emerald-600 uppercase">Promo Madu Bulk</span>
+              <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-emerald-600 transition-colors">Madu Multiflora</h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-3">Grosir bertingkat hingga Rp 46.000/kg. Opsi stiker & box.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-slate-900">Rp 46rb - 65rb/kg</span>
+              <a href="/produk" class="text-xs font-bold text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1">Pesan <ArrowRight size={13} /></a>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="relative bg-pink-50 rounded-2xl p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
+                <span class="absolute top-2 left-2 bg-pink-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">BPOM Resmi</span>
+                <img src="/produk/Serum Brightening by Namglow.png" alt="Serum Brightening by Namglow" class="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <span class="text-[11px] font-bold text-pink-600 uppercase">Namglow Skincare</span>
+              <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-pink-600 transition-colors">Serum Brightening</h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-3">Mencerahkan & melembabkan kulit. Aman bumil & busui.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-slate-900">Rp 99.000</span>
+              <a href="/produk" class="text-xs font-bold text-pink-600 hover:text-pink-700 inline-flex items-center gap-1">Pesan <ArrowRight size={13} /></a>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="relative bg-teal-50 rounded-2xl p-4 mb-4 flex items-center justify-center h-48 overflow-hidden">
+                <span class="absolute top-2 left-2 bg-teal-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Resep Dokter</span>
+                <img src="/produk/cream gatal.png" alt="Cream Racikan Gatal Dokter Namira" class="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <span class="text-[11px] font-bold text-teal-700 uppercase">Formulasi Medis</span>
+              <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-teal-700 transition-colors">Cream Racikan Gatal</h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-3">Untuk gatal, kudis, & luka menahun. Aman untuk anak & santri.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-extrabold text-slate-900">Rp 100.000</span>
+              <a href="/produk" class="text-xs font-bold text-teal-700 hover:text-teal-800 inline-flex items-center gap-1">Detail <ArrowRight size={13} /></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <a href="/produk" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-full transition-all shadow-md text-sm">
+            <span>Lihat Semua Produk & Detail Pemesanan</span>
+            <ChevronRight size={16} />
+          </a>
         </div>
 
       </div>

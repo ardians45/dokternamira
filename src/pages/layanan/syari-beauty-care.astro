@@ -3,12 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloat from '../../components/React/WhatsAppFloat';
-import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart } from 'lucide-react';
+import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart, ArrowRight } from 'lucide-react';
 ---
 
 <BaseLayout
-  title="Syar'i Beauty Care Malang | Perawatan Wajah Muslimah | Dokter Namira"
-  description="Perawatan kecantikan syar'i khusus wanita di Malang oleh Dokter Namira. Tersedia facial medis, peeling, dan skincare dengan bahan aman terdaftar BPOM."
+  title="Syar'i Beauty Care & Aesthetic Treatment Malang | Dokter Namira"
+  description="Perawatan kecantikan syar'i & Aesthetic Care khusus wanita di Malang oleh Dokter Namira. Tersedia facial medis, aesthetic care, dan Serum Brightening Namglow BPOM."
 >
   <Header />
 
@@ -19,17 +19,17 @@ import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart } from 'lucide-re
         <div class="max-w-3xl space-y-4">
           <div class="inline-flex items-center space-x-2 bg-pink-500/20 border border-pink-400/40 px-3.5 py-1.5 rounded-full text-pink-200 text-xs font-semibold">
             <Sparkles size={14} class="text-pink-300" />
-            <span>Perawatan Estetika Wajah • Khusus Wanita / Syar'i</span>
+            <span>Aesthetic Care & Treatment Wajah Syar'i • Khusus Wanita</span>
           </div>
           <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
-            Syar'i Beauty Care Khusus Wanita di Malang
+            Syar'i Beauty & Aesthetic Care Dokter Namira
           </h1>
           <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
-            Perawatan kesehatan dan kecantikan kulit wajah dalam suasana tenang, privat, dan aman. Konsultasi langsung dengan dokter untuk solusi masalah kulit wajah Anda.
+            Perawatan kesehatan dan kecantikan kulit wajah dalam suasana privat, nyaman, dan aman. Konsultasi langsung dengan dokter untuk solusi masalah kulit wajah Anda.
           </p>
           <div class="pt-4">
             <a
-              href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Syar%27i%20Beauty%20Care..."
+              href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Aesthetic%20Care%20%2F%20Beauty%20Care..."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
@@ -49,48 +49,70 @@ import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart } from 'lucide-re
           
           <div class="lg:col-span-8 space-y-8">
             <div class="space-y-4">
-              <h2 class="text-2xl font-bold text-teal-deep">Konsep Perawatan Wajah Syar'i</h2>
+              <h2 class="text-2xl font-bold text-teal-deep">Konsep Aesthetic & Beauty Care Syar'i</h2>
               <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Kami memahami kebutuhan wanita dan muslimah yang menginginkan tempat perawatan kulit wajah yang tenang dan menjaga privasi. Seluruh tindakan perawatan wajah didampingi oleh evaluasi medis untuk memastikan bahan yang digunakan aman bagi kesehatan jangka panjang.
               </p>
             </div>
 
             <div class="space-y-4">
-              <h3 class="text-lg font-bold text-slate-800">Menu Perawatan Utama:</h3>
+              <h3 class="text-lg font-bold text-slate-800">Menu Perawatan & Treatment Utama:</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-700">
                 <div class="p-4 bg-pink-50/50 rounded-xl border border-pink-100 flex items-start space-x-3">
                   <CheckCircle2 size={18} class="text-pink-500 shrink-0 mt-0.5" />
                   <div>
-                    <strong class="block text-slate-800 mb-0.5">Facial Medis & Cleansing</strong>
-                    <span>Pembersihan komedo, ekstraksi higienis, dan pencerahan kulit berkala.</span>
+                    <strong class="block text-slate-800 mb-0.5">Aesthetic Facial Treatment</strong>
+                    <span>Pembersihan komedo, ekstraksi higienis, pencerahan, dan relaksasi wajah.</span>
                   </div>
                 </div>
                 <div class="p-4 bg-pink-50/50 rounded-xl border border-pink-100 flex items-start space-x-3">
                   <CheckCircle2 size={18} class="text-pink-500 shrink-0 mt-0.5" />
                   <div>
-                    <strong class="block text-slate-800 mb-0.5">Chemical Peeling Dokter</strong>
-                    <span>Eksfoliasi sel kulit mati untuk masalah jerawat, bekas noda, atau kusam.</span>
+                    <strong class="block text-slate-800 mb-0.5">Chemical Peeling Medis</strong>
+                    <span>Eksfoliasi sel kulit mati untuk meratakan warna kulit dan mengatasi kusam/bekas jerawat.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured Product Highlight: Serum Namglow -->
+            <div class="bg-gradient-to-r from-pink-50 via-purple-50 to-white p-6 rounded-2xl border border-pink-200/80 space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-pink-600 uppercase tracking-wider">Product Highlight</span>
+                <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">BPOM Approved</span>
+              </div>
+              <div class="flex flex-col sm:flex-row items-center gap-6">
+                <img src="/produk/Serum Brightening by Namglow.png" alt="Serum Brightening by Namglow" class="h-32 w-auto object-contain shrink-0" />
+                <div class="space-y-2 text-xs text-slate-700">
+                  <h4 class="text-base font-bold text-slate-800">Serum Brightening by Namglow</h4>
+                  <p class="text-slate-600">Serum pencerah aman untuk ibu hamil & menyusui (bumil & busui). Menyamarkan bintik hitam dan melembabkan kulit secara intensif.</p>
+                  <div class="pt-1 flex items-center gap-3">
+                    <span class="text-sm font-extrabold text-slate-900">Rp 99.000</span>
+                    <a href="/produk" class="text-xs font-bold text-pink-600 hover:text-pink-700 inline-flex items-center gap-1">
+                      <span>Lihat Katalog Produk</span>
+                      <ArrowRight size={14} />
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 space-y-2 text-xs text-slate-600">
-              <strong class="block text-slate-800 text-sm">Privasi & Produk Terjamin BPOM</strong>
-              <p>Seluruh krim dan cairan peeling yang digunakan telah terdaftar BPOM resmi di bawah pengawasan dokter.</p>
+              <strong class="block text-slate-800 text-sm">Privasi & Keamanan Produk Terjamin</strong>
+              <p>Seluruh krim dan cairan yang digunakan telah terdaftar BPOM resmi di bawah pengawasan langsung Dokter Namira.</p>
             </div>
           </div>
 
           <div class="lg:col-span-4">
             <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 sticky top-28 space-y-6">
               <h3 class="font-bold text-lg text-teal-deep border-b border-slate-200 pb-3">
-                Konsultasi Skin Care
+                Reservasi Aesthetic Treatment
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Tanyakan ketersediaan jam treatment facial atau peeling pilihan Anda.
+                Jadwal perawatan kecantikan: Setiap hari (09.00 - 16.00 WIB dengan perjanjian).
               </p>
               <a
-                href="https://wa.me/6285819800843?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Syar%27i%20Beauty%20Care..."
+                href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20perawatan%20Aesthetic%20Care%20%2F%20Beauty%20Care..."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center space-x-2 text-xs transition-colors shadow-md"
@@ -107,5 +129,5 @@ import { Sparkles, CheckCircle2, PhoneCall, ShieldCheck, Heart } from 'lucide-re
   </main>
 
   <Footer />
-  <WhatsAppFloat client:idle defaultMessage="Halo Dokter Namira, saya ingin konsultasi perawatan Syar'i Beauty Care..." />
+  <WhatsAppFloat client:load />
 </BaseLayout>

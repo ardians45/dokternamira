@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/React/WhatsAppFloat';
+import { Scissors, CheckCircle2, MapPin, PhoneCall, ShieldCheck, HeartPulse, Clock, Sparkles } from 'lucide-react';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Layanan Sunat & Khitan Malang",
+  "description": "Layanan khitan/sunat anak dan dewasa oleh Dokter Namira Malang dengan metode modern, steril, dan minim rasa sakit.",
+  "procedureType": "http://schema.org/SurgicalProcedure",
+  "location": {
+    "@type": "Place",
+    "name": "Praktek Dokter Namira Malang",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Malang",
+      "addressRegion": "Jawa Timur",
+      "addressCountry": "ID"
+    }
+  }
+};
+---
+
+<BaseLayout
+  title="Layanan Khitan & Sunat Modern Malang | Praktek Dokter Namira"
+  description="Layanan Sunat / Khitan anak & dewasa di Malang oleh Dokter Namira. Metode modern, steril, minim rasa sakit, bisa tindakan klinik atau homecare."
+  schemaData={pageSchema}
+>
+  <Header />
+
+  <main class="flex-grow bg-slate-50">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-teal-deep via-[#014758] to-slate-dark text-white py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-4">
+          <div class="inline-flex items-center space-x-2 bg-teal-soft/20 border border-teal-soft/40 px-3.5 py-1.5 rounded-full text-teal-light text-xs font-semibold">
+            <Scissors size={14} class="text-amber-400" />
+            <span>Tindakan Medis • Klinik & Homecare Malang</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Layanan Khitan / Sunat Modern Dokter Namira
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+            Penanganan khitan medis profesional untuk bayi, anak-anak, hingga dewasa. Dilakukan langsung oleh dokter berpengalaman dengan metode modern yang aman, efisien, dan ramah anak.
+          </p>
+          <div class="pt-4">
+            <a
+              href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20dan%20reservasi%20Layanan%20Sunat%2FKhitan..."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all text-sm"
+            >
+              <PhoneCall size={18} />
+              <span>Konsultasi & Jadwal Sunat via WA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <div class="lg:col-span-8 space-y-8">
+            <div class="space-y-4">
+              <h2 class="text-2xl font-bold text-teal-deep">Keunggulan Layanan Khitan Dokter Namira</h2>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Tindakan khitan di Praktek Dokter Namira mengutamakan kenyamanan fisik dan psikologis anak. Kami memberikan pelayanan steril medis tingkat tinggi serta opsi homecare bagi keluarga yang menginginkan tindakan di rumah sendiri.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-5 bg-teal-50/60 rounded-2xl border border-teal-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center font-bold">
+                  <ShieldCheck size={18} />
+                </div>
+                <h3 class="font-bold text-slate-800 text-sm">Steril & Medis Standar RS</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Peralatan medis sekali pakai & proses anestesi lokal tanpa rasa cemas.</p>
+              </div>
+
+              <div class="p-5 bg-amber-50/60 rounded-2xl border border-amber-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center font-bold">
+                  <Sparkles size={18} />
+                </div>
+                <h3 class="font-bold text-slate-800 text-sm">Penyembuhan Cepat</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Metode minim perdarahan memungkinkan pasien lekas beraktivitas.</p>
+              </div>
+
+              <div class="p-5 bg-blue-50/60 rounded-2xl border border-blue-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold">
+                  <HeartPulse size={18} />
+                </div>
+                <h3 class="font-bold text-slate-800 text-sm">Ramah Anak & Edukatif</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Pendekatan persuasif tanpa trauma psikologis bagi si kecil.</p>
+              </div>
+
+              <div class="p-5 bg-emerald-50/60 rounded-2xl border border-emerald-100 space-y-2">
+                <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold">
+                  <Clock size={18} />
+                </div>
+                <h3 class="font-bold text-slate-800 text-sm">Kontrol & Pendampingan Pasca Sunat</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Dokter siap memantau proses penyembuhan hingga sembuh total.</p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
+              <h3 class="text-lg font-bold text-slate-800">Paket Layanan Khitan</h3>
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li class="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} class="text-teal-600 shrink-0 mt-0.5" />
+                  <span><strong>Sunat Anak (Klinik / Homecare):</strong> Termasuk obat-obatan paska sunat, kontrol gratis, dan celana sunat.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} class="text-teal-600 shrink-0 mt-0.5" />
+                  <span><strong>Sunat Dewasa / Khusus:</strong> Privasi terjamin penuh dengan penanganan anestesi khusus.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sidebar Sticky CTA -->
+          <div class="lg:col-span-4 space-y-6">
+            <div class="bg-slate-900 text-white p-6 rounded-3xl space-y-6 sticky top-24 shadow-xl">
+              <h3 class="text-xl font-bold font-display">Jadwalkan Khitan Sekarang</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Diskusikan metode dan jadwal terbaik untuk buah hati Anda langsung dengan Dokter Namira.
+              </p>
+              <div class="space-y-3 pt-2 text-xs">
+                <div class="flex items-center gap-2">
+                  <MapPin size={16} class="text-teal-400 shrink-0" />
+                  <span>Ruko Ragali Residence, Merjosari Malang</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <Clock size={16} class="text-teal-400 shrink-0" />
+                  <span>Setiap Hari (Dengan Perjanjian)</span>
+                </div>
+              </div>
+              <a 
+                href="https://wa.me/6285270001948?text=Halo%20Dokter%20Namira%2C%20saya%20ingin%20konsultasi%20dan%20reservasi%20Layanan%20Sunat%2FKhitan..." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 text-sm transition-all shadow-md"
+              >
+                <PhoneCall size={16} />
+                <span>Konsultasi WA Dokter</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <WhatsAppFloat client:load />
+  </main>
+
+  <Footer />
+</BaseLayout>
